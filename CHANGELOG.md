@@ -5,5 +5,5 @@
 - Initial public release of eShasan (landing).
 - Header, hero, resources, solutions, product and contact pages.
 - Global i18n setup (EN/NP) with persisted language.
-- Clean Ninja Infosys design tokens and responsive layout.
+- Clean Carbon design and responsive layout.
 - Basic SEO + performance pass; initial accessibility checks.
