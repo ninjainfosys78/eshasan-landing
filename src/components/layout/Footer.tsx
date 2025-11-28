@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#003893] text-white px-4 pt-8 pb-4 text-[14px] font-['IBM Plex Sans']">
       {/* TOP SECTION */}
-      <div className="mx-auto flex max-w-[1200px] flex-wrap items-start justify-between gap-[48px]">
+      <div className="mx-auto flex max-w-[1400px] flex-wrap items-start justify-between gap-[48px]">
         {/* LEFT BRAND SECTION */}
         <div className="max-w-[280px] flex-1 min-w-[220px]">
           <div className="mb-1 text-[24px] font-semibold tracking-[0.03em]">
@@ -146,10 +146,10 @@ export default function Footer() {
       </div>
 
       {/* DIVIDER */}
-      <div className="mx-auto mt-6 mb-4 max-w-[1200px] border-t border-white/30" />
+      <div className="mx-auto mt-6 mb-4 max-w-[1400px] border-t border-white/30" />
 
       {/* BOTTOM SECTION */}
-      <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-4 text-[12px]">
+      <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between gap-4 text-[12px]">
         <div className="flex items-center gap-1">
           <span className="text-[12px]">©</span>
           <span>{t.copyright}</span>
