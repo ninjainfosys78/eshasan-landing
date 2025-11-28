@@ -1,4 +1,3 @@
-// src/components/solutions/Industries.tsx
 import {
   Card,
   CardContent,
@@ -60,12 +59,12 @@ export default function Industries() {
 
   return (
     <section aria-label="Industries we serve" className="py-12 bg-[#E6EBF4]">
-      <div className="max-w-[1230px] mx-auto px-4">
+      <div className="max-w-[1400px] mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="text-[28px] font-bold text-[#000000] mb-2">
             {t.heading}
           </h2>
-          <p className="text-sm text-[#6B7280]">
+          <p className="text-[16px] text-[#6B7280]">
             {t.subtitle}
           </p>
         </div>
@@ -78,7 +77,7 @@ export default function Industries() {
                   <div className="flex-none rounded p-2 bg-transparent">
                     {industry.icon}
                   </div>
-                  <CardTitle className="text-[15px] font-semibold">
+                  <CardTitle className="text-[16px] font-semibold">
                     {industry.title}
                   </CardTitle>
                 </div>
