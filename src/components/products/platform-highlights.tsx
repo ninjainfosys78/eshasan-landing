@@ -9,59 +9,59 @@ export default function PlatformHighlights() {
 
   return (
     <section className="w-full bg-[#E6EBF4] py-16 font-['IBM Plex Sans']">
-      <div className="mx-auto max-w-[1230px] px-4">
-        <div className="text-center">
-          <h2 className="text-[28px] font-semibold tracking-[0.02em] text-[#0B0D12]">
+      <div className="mx-auto max-w-[1400px] px-4 md:px-3 sm:px-2">
+        <div className="text-center mb-10">
+          <h2 className="text-[28px] font-bold text-[#000000] mb-3">
             {t.heading}
           </h2>
-          <p className="mt-2 text-sm text-[#4B5563]">
+          <p className="text-[16px] text-[#6B7280]">
             {t.subtitle}
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-1 md:grid-cols-2">
-          <Card className="border-[#CDD5E0] bg-[#E6EBF4] shadow-none">
-            <CardHeader className="flex flex-col items-center gap-2 pb-2 text-center">
-              <Layers className="h-6 w-6 text-slate-700" />
-              <CardTitle className="text-[16px] ">{t.scalable.title}</CardTitle>
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          <Card className="border-gray-300 bg-transparent shadow-none hover:shadow-none">
+            <CardHeader className="flex flex-col items-center gap-3 pb-2 text-center px-6 pt-6">
+              <Layers className="h-6 w-6 text-black" strokeWidth={1.5} />
+              <CardTitle className="text-[16px] font-semibold text-[#072235]">{t.scalable.title}</CardTitle>
             </CardHeader>
-            <CardContent className="pt-0 text-center text-sm text-[#4B5563]">
+            <CardContent className="pt-2 pb-6 px-6 text-center text-[13px] text-[#6B7280] leading-relaxed">
               {t.scalable.desc}
             </CardContent>
           </Card>
 
-          <Card className="border-[#CDD5E0] bg-[#E6EBF4] shadow-none">
-            <CardHeader className="flex flex-col items-center gap-2 pb-2 text-center">
-              <Lock className="h-6 w-6 text-slate-700" />
-              <CardTitle className="text-[16px] font-semibold">
+          <Card className="border-gray-300 bg-transparent shadow-none hover:shadow-none">
+            <CardHeader className="flex flex-col items-center gap-3 pb-2 text-center px-6 pt-6">
+              <Lock className="h-6 w-6 text-black" strokeWidth={1.5} />
+              <CardTitle className="text-[16px] font-semibold text-[#072235]">
                 {t.secureApis.title}
               </CardTitle>
             </CardHeader>
-            <CardContent className="pt-0 text-center text-sm text-[#4B5563]">
+            <CardContent className="pt-2 pb-6 px-6 text-center text-[13px] text-[#6B7280] leading-relaxed">
               {t.secureApis.desc}
             </CardContent>
           </Card>
 
-          <Card className="border-[#CDD5E0] bg-[#E6EBF4] shadow-none">
-            <CardHeader className="flex flex-col items-center gap-2 pb-2 text-center">
-              <PanelsTopLeft className="h-6 w-6 text-slate-700" />
-              <CardTitle className="text-[16px] font-semibold">
+          <Card className="border-gray-300 bg-transparent shadow-none hover:shadow-none">
+            <CardHeader className="flex flex-col items-center gap-3 pb-2 text-center px-6 pt-6">
+              <PanelsTopLeft className="h-6 w-6 text-black" strokeWidth={1.5} />
+              <CardTitle className="text-[16px] font-semibold text-[#072235]">
                 {t.modular.title}
               </CardTitle>
             </CardHeader>
-            <CardContent className="pt-0 text-center text-sm text-[#4B5563]">
+            <CardContent className="pt-2 pb-6 px-6 text-center text-[13px] text-[#6B7280] leading-relaxed">
               {t.modular.desc}
             </CardContent>
           </Card>
 
-          <Card className="border-[#CDD5E0] bg-[#E6EBF4] shadow-none">
-            <CardHeader className="flex flex-col items-center gap-2 pb-2 text-center">
-              <Activity className="h-6 w-6 text-slate-700" />
-              <CardTitle className="text-[16px] font-semibold">
+          <Card className="border-gray-300 bg-transparent shadow-none hover:shadow-none">
+            <CardHeader className="flex flex-col items-center gap-3 pb-2 text-center px-6 pt-6">
+              <Activity className="h-6 w-6 text-black" strokeWidth={1.5} />
+              <CardTitle className="text-[16px] font-semibold text-[#072235]">
                 {t.insights.title}
               </CardTitle>
             </CardHeader>
-            <CardContent className="pt-0 text-center text-sm text-[#4B5563]">
+            <CardContent className="pt-2 pb-6 px-6 text-center text-[13px] text-[#6B7280] leading-relaxed">
               {t.insights.desc}
             </CardContent>
           </Card>

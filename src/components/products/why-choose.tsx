@@ -9,53 +9,53 @@ export default function WhyChooseEshasan() {
 
   return (
     <section className="w-full bg-white py-16 font-['IBM Plex Sans']">
-      <div className="mx-auto max-w-[1230px] px-4">
-        <div className="text-center">
-          <h2 className="text-[28px] font-bold tracking-[0.02em] text-[#0B0D12]">
+      <div className="mx-auto max-w-[1400px] px-4 md:px-3 sm:px-2">
+        <div className="text-center mb-10">
+          <h2 className="text-[28px] font-bold text-[#000000] mb-3">
             {t.heading}
           </h2>
-          <p className="mt-2 text-sm text-[#4B5563]">
+          <p className="text-[16px] text-[#6B7280]">
             {t.subtitle}
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-1 md:grid-cols-2">
-          <Card className="border-[#E5E7EB] shadow-none hover:shadow transition-all">
-            <CardHeader className="flex flex-row items-start gap-3 pb-2">
-              <GitMerge className="h-6 w-6 text-slate-700" />
-              <CardTitle className="text-[16px]">{t.integration.title}</CardTitle>
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          <Card className="border-gray-200 shadow-none">
+            <CardHeader className="flex flex-col items-center gap-3 pb-2 px-6 pt-6 text-center">
+              <GitMerge className="h-6 w-6 text-black" strokeWidth={1.5} />
+              <CardTitle className="text-[16px] font-semibold text-[#000000]">{t.integration.title}</CardTitle>
             </CardHeader>
-            <CardContent className="pt-0 text-sm text-[#4B5563]">
+            <CardContent className="pt-2 pb-6 px-6 text-[13px] text-[#6B7280] leading-relaxed text-center">
               {t.integration.desc}
             </CardContent>
           </Card>
 
-          <Card className="border-[#E5E7EB] shadow-none hover:shadow transition-all">
-            <CardHeader className="flex flex-row items-start gap-3 pb-2">
-              <ShieldCheck className="h-6 w-6 text-slate-700" />
-              <CardTitle className="text-[16px]">{t.security.title}</CardTitle>
+          <Card className="border-gray-200 shadow-none">
+            <CardHeader className="flex flex-col items-center gap-3 pb-2 px-6 pt-6 text-center">
+              <ShieldCheck className="h-6 w-6 text-black" strokeWidth={1.5} />
+              <CardTitle className="text-[16px] font-semibold text-[#000000]">{t.security.title}</CardTitle>
             </CardHeader>
-            <CardContent className="pt-0 text-sm text-[#4B5563]">
+            <CardContent className="pt-2 pb-6 px-6 text-[13px] text-[#6B7280] leading-relaxed text-center">
               {t.security.desc}
             </CardContent>
           </Card>
 
-          <Card className="border-[#E5E7EB] shadow-none hover:shadow transition-all">
-            <CardHeader className="flex flex-row items-start gap-3 pb-2">
-              <Users className="h-6 w-6 text-slate-700" />
-              <CardTitle className="text-[16px]">{t.citizen.title}</CardTitle>
+          <Card className="border-gray-200 shadow-none">
+            <CardHeader className="flex flex-col items-center gap-3 pb-2 px-6 pt-6 text-center">
+              <Users className="h-6 w-6 text-black" strokeWidth={1.5} />
+              <CardTitle className="text-[16px] font-semibold text-[#000000]">{t.citizen.title}</CardTitle>
             </CardHeader>
-            <CardContent className="pt-0 text-sm text-[#4B5563]">
+            <CardContent className="pt-2 pb-6 px-6 text-[13px] text-[#6B7280] leading-relaxed text-center">
               {t.citizen.desc}
             </CardContent>
           </Card>
 
-          <Card className="border-[#E5E7EB] shadow-none hover:shadow transition-all">
-            <CardHeader className="flex flex-row items-start gap-3 pb-2">
-              <Cloud className="h-6 w-6 text-slate-700" />
-              <CardTitle className="text-[16px]">{t.cloud.title}</CardTitle>
+          <Card className="border-gray-200 shadow-none">
+            <CardHeader className="flex flex-col items-center gap-3 pb-2 px-6 pt-6 text-center">
+              <Cloud className="h-6 w-6 text-black" strokeWidth={1.5} />
+              <CardTitle className="text-[16px] font-semibold text-[#000000]">{t.cloud.title}</CardTitle>
             </CardHeader>
-            <CardContent className="pt-0 text-sm text-[#4B5563]">
+            <CardContent className="pt-2 pb-6 px-6 text-[13px] text-[#6B7280] leading-relaxed text-center">
               {t.cloud.desc}
             </CardContent>
           </Card>
