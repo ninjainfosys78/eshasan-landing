@@ -107,13 +107,6 @@ export const translations = {
     },
     footer: {
       brandDescription: 'Transforming governance through intelligent digital solutions.',
-      product: {
-        title: 'Product',
-        features: 'Features',
-        pricing: 'Pricing',
-        security: 'Security',
-        roadmap: 'Roadmap',
-      },
       modules: {
         title: 'Modules',
         governance: 'Governance',
@@ -124,15 +117,16 @@ export const translations = {
       company: {
         title: 'Company',
         about: 'About',
-        careers: 'Careers',
-        partners: 'Partners',
+        solutions: 'Solutions',
+        resources: 'Resources',
+        products: 'Products',
         contact: 'Contact',
       },
       getInTouch: {
         title: 'Get in Touch',
         location: 'Kathmandu, Nepal',
         email: 'info@ninjainfosys.com',
-        phone1: '+977-9858042433',
+        phone1: '+977-9800000000',
         phone2: '01-5922361',
       },
       copyright: '2025 Ninja Infosys. All rights reserved.',
@@ -337,13 +331,6 @@ export const translations = {
     },
     footer: {
       brandDescription: 'बुद्धिमान डिजिटल समाधानहरू मार्फत शासन परिवर्तन गर्दै।',
-      product: {
-        title: 'उत्पादन',
-        features: 'सुविधाहरू',
-        pricing: 'मूल्य निर्धारण',
-        security: 'सुरक्षा',
-        roadmap: 'रोडम्याप',
-      },
       modules: {
         title: 'मोड्युलहरू',
         governance: 'शासन',
@@ -354,8 +341,9 @@ export const translations = {
       company: {
         title: 'कम्पनी',
         about: 'बारेमा',
-        careers: 'करियर',
-        partners: 'साझेदारहरू',
+        solutions: 'समाधानहरू',
+        resources: 'स्रोतहरू',
+        products: 'उत्पादनहरू',
         contact: 'सम्पर्क',
       },
       getInTouch: {

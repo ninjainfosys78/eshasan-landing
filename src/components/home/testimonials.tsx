@@ -127,7 +127,7 @@ export default function Testimonials() {
 
         <div className="relative mx-auto w-full max-w-[900px] max-[700px]:mb-4">
           <div
-            className="relative rounded-md border-[1.5px] border-white/[0.12] bg-white/[0.04] shadow-[inset_0_1px_2px_rgba(255,255,255,0.08),0_10px_40px_rgba(0,0,0,0.3)] px-5 py-6 sm:px-6 md:px-8"
+            className="relative rounded-none border-[1.5px] border-white/[0.12] bg-white/[0.04] shadow-[inset_0_1px_2px_rgba(255,255,255,0.08),0_10px_40px_rgba(0,0,0,0.3)] px-5 py-6 sm:px-6 md:px-8"
             style={{
               backdropFilter: "blur(2px)",
               WebkitBackdropFilter: "blur(2px)",

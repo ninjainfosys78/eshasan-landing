@@ -1,9 +1,8 @@
 # Changelog
 
-## [v0.1.0] - 2025-11-28
+## [v0.1.1] - 2025-12-02
 ### Overview
-- Initial public release of eShasan (landing).
-- Header, hero, resources, solutions, product and contact pages.
-- Global i18n setup (EN/NP) with persisted language.
-- Clean Carbon design and responsive layout.
+- Footer updated with new design and links.
+- Implementation of pocketbase in insights and leadership section
+- Clean design tokens and responsive layout.
 - Basic SEO + performance pass; initial accessibility checks.

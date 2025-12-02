@@ -1,4 +1,4 @@
-import { FileText, FileType, BookOpen, BarChart3, ArrowRight } from "lucide-react";
+import { FileText, FileType, BookOpen, BarChart3 } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { useLanguageStore } from "@/store/Language-store";
 import { resourceTranslations } from "@/i18n/resource-translation";
@@ -11,29 +11,21 @@ export default function FeaturedResources() {
     {
       title: t.items.caseStudy.title,
       desc: t.items.caseStudy.desc,
-      cta: t.items.caseStudy.cta,
-      href: "#",
       icon: FileText,
     },
     {
       title: t.items.whitepaper.title,
       desc: t.items.whitepaper.desc,
-      cta: t.items.whitepaper.cta,
-      href: "#",
       icon: FileType,
     },
     {
       title: t.items.documentation.title,
       desc: t.items.documentation.desc,
-      cta: t.items.documentation.cta,
-      href: "#",
       icon: BookOpen,
     },
     {
       title: t.items.report.title,
       desc: t.items.report.desc,
-      cta: t.items.report.cta,
-      href: "#",
       icon: BarChart3,
     },
   ];
@@ -59,13 +51,6 @@ export default function FeaturedResources() {
 
                 <CardContent className="pt-0 text-[14px] text-[rgba(7,34,53,0.7)] leading-relaxed flex flex-col flex-1 text-left">
                   <p className="mb-6">{item.desc}</p>
-
-                  <div className="mt-auto">
-                    <a href={item.href} className="inline-flex items-center text-[13px] font-medium text-[#003893] no-underline hover:underline">
-                      {item.cta}
-                      <ArrowRight className="ml-2 h-3 w-3" />
-                    </a>
-                  </div>
                 </CardContent>
               </Card>
             );
