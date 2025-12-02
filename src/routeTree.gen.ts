@@ -16,6 +16,7 @@ import { Route as ProductsRouteImport } from './routes/products'
 import { Route as SolutionsRouteImport } from './routes/solutions'
 import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BlogRouteImport } from './routes/blog'
 
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
@@ -52,6 +53,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -61,6 +67,7 @@ export interface FileRoutesByFullPath {
   '/solutions': typeof SolutionsRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/contact': typeof ContactRoute
+  '/blog': typeof BlogRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +77,7 @@ export interface FileRoutesByTo {
   '/solutions': typeof SolutionsRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/contact': typeof ContactRoute
+  '/blog': typeof BlogRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,13 +88,14 @@ export interface FileRoutesById {
   '/solutions': typeof SolutionsRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/contact': typeof ContactRoute
+  '/blog': typeof BlogRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/resources' | '/products' | '/solutions' | '/terms-and-conditions' | '/contact'
+  fullPaths: '/' | '/about' | '/resources' | '/products' | '/solutions' | '/terms-and-conditions' | '/contact' | '/blog'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/resources' | '/products' | '/solutions' | '/terms-and-conditions' | '/contact'
-  id: '__root__' | '/' | '/about' | '/resources' | '/products' | '/solutions' | '/terms-and-conditions' | '/contact'
+  to: '/' | '/about' | '/resources' | '/products' | '/solutions' | '/terms-and-conditions' | '/contact' | '/blog'
+  id: '__root__' | '/' | '/about' | '/resources' | '/products' | '/solutions' | '/terms-and-conditions' | '/contact' | '/blog'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -150,6 +159,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -161,6 +177,7 @@ const rootRouteChildren: RootRouteChildren = {
   SolutionsRoute: SolutionsRoute,
   TermsAndConditionsRoute: TermsAndConditionsRoute,
   ContactRoute: ContactRoute,
+  BlogRoute: BlogRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
