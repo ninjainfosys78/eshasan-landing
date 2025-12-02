@@ -1,4 +1,4 @@
-import { BookOpen, Users2, Headphones, ArrowRight } from "lucide-react";
+import { BookOpen, Users2, Headphones } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { useLanguageStore } from "@/store/Language-store";
 import { resourceTranslations } from "@/i18n/resource-translation";
@@ -12,22 +12,16 @@ export default function GetTheMost() {
       icon: BookOpen,
       title: t.documentation.title,
       desc: t.documentation.desc,
-      href: "#",
-      cta: t.documentation.cta,
     },
     {
       icon: Users2,
       title: t.forum.title,
       desc: t.forum.desc,
-      href: "#",
-      cta: t.forum.cta,
     },
     {
       icon: Headphones,
       title: t.support.title,
       desc: t.support.desc,
-      href: "#",
-      cta: t.support.cta,
     },
   ];
 
@@ -56,13 +50,6 @@ export default function GetTheMost() {
 
                 <CardContent className="pt-0 text-[13px] sm:text-[14px] leading-relaxed text-[rgba(7,34,53,0.7)] flex flex-col flex-1">
                   <p className="mb-4">{item.desc}</p>
-
-                  <div className="mt-auto pt-2">
-                    <a href={item.href} className="inline-flex items-center text-[13px] sm:text-[14px] font-medium text-[#003893] no-underline hover:underline">
-                      {item.cta}
-                      <ArrowRight className="ml-2 h-3 w-3" />
-                    </a>
-                  </div>
                 </CardContent>
               </Card>
             );
