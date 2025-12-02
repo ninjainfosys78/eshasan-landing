@@ -1,4 +1,4 @@
-import { FileText, FileType, BookOpen, BarChart3, ArrowRight } from "lucide-react";
+import { FileText, FileType, BookOpen, BarChart3 } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { useLanguageStore } from "@/store/Language-store";
 import { resourceTranslations } from "@/i18n/resource-translation";

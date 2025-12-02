@@ -1,4 +1,4 @@
-import { BookOpen, Users2, Headphones, ArrowRight } from "lucide-react";
+import { BookOpen, Users2, Headphones } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { useLanguageStore } from "@/store/Language-store";
 import { resourceTranslations } from "@/i18n/resource-translation";
