@@ -1,6 +1,8 @@
-import PocketBase from 'pocketbase';
+import PocketBase from "pocketbase";
 
-export const pb = new PocketBase(import.meta.env.VITE_PB_URL || 'https://cms.ninjainfosys.com/');
+export const pb = new PocketBase(
+  import.meta.env.VITE_PB_URL || "https://cms.ninjainfosys.com/"
+);
 
 export interface Blog {
   id: string;
@@ -16,10 +18,15 @@ export interface Blog {
 
 export interface Leader {
   id: string;
-  Name: string;
-  Position: string;
-  Description: string;
+  Name_EN?: string;
+  Name_NE?: string;
+  Position_EN?: string;
+  Position_NE?: string;
+  Description_EN?: string;
+  Description_NE?: string;
   Image: string;
   created: string;
   updated: string;
 }
+
+
