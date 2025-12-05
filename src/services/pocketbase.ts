@@ -14,12 +14,12 @@ export interface Blog {
   updated: string;
 }
 
-export interface Leader {
-  id: string;
-  Name: string;
-  Position: string;
-  Description: string;
-  Image: string;
-  created: string;
-  updated: string;
-}
+// export interface Leader {
+//   id: string;
+//   Name: string;
+//   Position: string;
+//   Description: string;
+//   Image: string;
+//   created: string;
+//   updated: string;
+// }
