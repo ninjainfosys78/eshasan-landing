@@ -7,10 +7,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#003893] text-white px-4 pt-8 pb-4 text-[14px] font-['IBM Plex Sans']">
-      {/* TOP SECTION */}
       <div className="mx-auto">
         <div className="flex flex-col lg:flex-row justify-between gap-2">
-          {/* LEFT BRAND SECTION */}
           <div className="lg:ml-12 lg:w-[320px]">
             <div className="mb-1 text-[24px] font-semibold tracking-[0.03em]">
               eShasan
@@ -20,10 +18,10 @@ export default function Footer() {
               {t.brandDescription}
             </p>
 
-            {/* SOCIAL ICONS */}
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://www.facebook.com/infosysninja"
+                target="_blank"
                 aria-label="Facebook"
                 className="flex h-[32px] w-[32px] items-center justify-center rounded-full border border-white/60 !text-white transition hover:bg-white/20"
               >
@@ -33,8 +31,9 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
-                aria-label="Twitter"
+                href="https://x.com/NinjaPvt"
+                target="_blank"
+                aria-label="Twitter / X"
                 className="flex h-[32px] w-[32px] items-center justify-center rounded-full border border-white/60 !text-white transition hover:bg-white/20"
               >
                 <svg className="h-[16px] w-[16px] fill-current" viewBox="0 0 24 24">
@@ -43,33 +42,25 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
-                aria-label="YouTube"
+                href="https://www.linkedin.com/company/ninja-infosys-official/posts/?feedView=all"
+                target="_blank"
+                aria-label="LinkedIn"
                 className="flex h-[32px] w-[32px] items-center justify-center rounded-full border border-white/60 !text-white transition hover:bg-white/20"
               >
                 <svg className="h-[16px] w-[16px] fill-current" viewBox="0 0 24 24">
-                  <path d="M21 8.5s-.2-1.4-.8-2c-.7-.8-1.5-.8-1.9-.9C16.4 5.3 12 5.3 12 5.3s-4.4 0-6.3.3c-.4.1-1.2.1-1.9.9-.6.6-.8 2-.8 2s-.2 1.6-.2 3.1v1c0 1.5.2 3.1.2 3.1s.2 1.4.8 2c.7.8 1.7.8 2.1.9 1.9.3 6.2.3 6.2.3s4.4 0 6.3-.3c.4-.1 1.2-.1 1.9-.9.6-.6.8-2 .8-2s.2-1.5.2-3.1v-1c0-1.5-.2-3.1-.2-3.1zM10.4 14.6V9.4l4.4 2.6-4.4 2.6z" />
+                  <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2h.1c.5-.9 1.7-2.1 3.7-2.1 3.9 0 4.6 2.6 4.6 6V23h-4v-7.8c0-1.9 0-4.4-2.7-4.4-2.7 0-3.1 2.1-3.1 4.3V23h-4V8z" />
                 </svg>
               </a>
             </div>
           </div>
 
-          {/* RIGHT COLUMNS SECTION */}
           <div className="flex gap-12 lg:gap-20">
             <div className="min-w-[140px]">
               <h4 className="mb-2 text-[14px] font-semibold">{t.modules.title}</h4>
-              <p className="block opacity-90 text-white">
-                {t.modules.governance}
-              </p>
-              <p className="block opacity-90 text-white">
-                {t.modules.finance}
-              </p>
-              <p className="block opacity-90 text-white">
-                {t.modules.hrManagement}
-              </p>
-              <p className="block opacity-90 text-white">
-                {t.modules.analytics}
-              </p>
+              <p className="block opacity-90 text-white">{t.modules.governance}</p>
+              <p className="block opacity-90 text-white">{t.modules.finance}</p>
+              <p className="block opacity-90 text-white">{t.modules.hrManagement}</p>
+              <p className="block opacity-90 text-white">{t.modules.analytics}</p>
             </div>
 
             <div className="min-w-[140px]">
@@ -126,10 +117,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* DIVIDER */}
       <div className="mx-auto mt-6 mb-4 max-w-[1380px] border-t border-white/30" />
 
-      {/* BOTTOM SECTION */}
       <div className="mx-auto flex max-w-[1380px] flex-wrap items-center justify-between gap-4 text-[12px]">
         <div className="flex items-center gap-1">
           <span className="text-[12px]">©</span>
