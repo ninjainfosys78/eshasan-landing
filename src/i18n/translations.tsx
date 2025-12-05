@@ -126,7 +126,7 @@ export const translations = {
         title: 'Get in Touch',
         location: 'Kathmandu, Nepal',
         email: 'info@ninjainfosys.com',
-        phone1: '+977-9800000000',
+        phone1: '+977-9858042647',
         phone2: '01-5922361',
       },
       copyright: '2025 Ninja Infosys. All rights reserved.',

@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
-import Leadership from "../components/about/Leadership";
+// import Leadership from "../components/about/Leadership";
 import Mission from "@/components/about/Mission";
 import Testimonials from "@/components/home/testimonials";
 import GlobalCTA from "@/components/home/global-cta";
@@ -149,7 +149,7 @@ function AboutPage() {
         </div>
       </section>
       <Testimonials />
-      <Leadership />
+      {/* <Leadership /> */}
       <Mission />
       <GlobalCTA />
       <Footer />
