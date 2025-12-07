@@ -42,7 +42,7 @@ export default function InteractionModel() {
             {/* Tabs - Perfectly aligned with header on both sides */}
             <div className="max-w-[1400px] mx-auto px-4 md:px-3 sm:px-2 mb-8">
                 {/* Top row - 5 tabs */}
-                <div className="flex flex-wrap items-stretch justify-center gap-3 mb-3">
+                <div className="flex flex-col sm:flex-row flex-wrap items-stretch justify-center gap-3 mb-3">
                     {topTabs.map((tab) => {
                         const Icon = tab.icon;
                         const isActive = activeTab === tab.id;
@@ -54,7 +54,7 @@ export default function InteractionModel() {
                                     borderColor: isActive ? "#003893" : "#b0c1de",
                                 }}
                                 className={cn(
-                                    "flex items-center gap-2 border-2 border-solid px-6 py-3 text-[14px] font-medium transition-all duration-200 flex-1 cursor-pointer",
+                                    "flex items-center gap-2 border-2 border-solid px-6 py-3 text-[14px] font-medium transition-all duration-200 sm:flex-1 cursor-pointer w-full sm:w-auto",
                                     isActive
                                         ? "bg-[#003893] text-white"
                                         : "bg-white text-slate-700 hover:bg-gray-50 hover:border-[#003893] hover:text-[#003893]"
@@ -67,8 +67,8 @@ export default function InteractionModel() {
                     })}
                 </div>
 
-                {/* Bottom row - 2 tabs centered */}
-                <div className="flex justify-center gap-3">
+                {/* Bottom row - 2 tabs */}
+                <div className="flex flex-col sm:flex-row justify-center gap-3">
                     {bottomTabs.map((tab) => {
                         const Icon = tab.icon;
                         const isActive = activeTab === tab.id;
@@ -80,7 +80,7 @@ export default function InteractionModel() {
                                     borderColor: isActive ? "#003893" : "#b0c1de",
                                 }}
                                 className={cn(
-                                    "flex items-center gap-2 border-2 border-solid px-6 py-3 text-[14px] font-medium transition-all duration-200 cursor-pointer",
+                                    "flex items-center gap-2 border-2 border-solid px-6 py-3 text-[14px] font-medium transition-all duration-200 cursor-pointer w-full sm:w-auto",
                                     isActive
                                         ? "bg-[#003893] text-white"
                                         : "bg-white text-slate-700 hover:bg-gray-50 hover:border-[#003893] hover:text-[#003893]"

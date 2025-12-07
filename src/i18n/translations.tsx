@@ -113,6 +113,7 @@ export const translations = {
         finance: 'Finance',
         hrManagement: 'HR Management',
         analytics: 'Analytics',
+        infrastructure: 'Infrastructure',
       },
       company: {
         title: 'Company',
@@ -337,6 +338,7 @@ export const translations = {
         finance: 'वित्त',
         hrManagement: 'मानव संसाधन व्यवस्थापन',
         analytics: 'विश्लेषण',
+        infrastructure: 'पूर्वाधार',
       },
       company: {
         title: 'कम्पनी',
