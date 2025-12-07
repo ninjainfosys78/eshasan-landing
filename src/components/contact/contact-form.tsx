@@ -199,7 +199,7 @@ export default function ContactForm() {
             value={formData.fullName}
             onChange={handleChange}
             disabled={isSubmitting}
-            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-none text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-none text-sm text-gray-900 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
             required
           />
         </div>
@@ -216,7 +216,7 @@ export default function ContactForm() {
             value={formData.organization}
             onChange={handleChange}
             disabled={isSubmitting}
-            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-none text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-none text-sm text-gray-900 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
             required
           />
         </div>
@@ -233,7 +233,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             disabled={isSubmitting}
-            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-none text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-none text-sm text-gray-900 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
             required
           />
         </div>
@@ -250,7 +250,7 @@ export default function ContactForm() {
             value={formData.phone}
             onChange={handleChange}
             disabled={isSubmitting}
-            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-none text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-none text-sm text-gray-900 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
           />
         </div>
 
@@ -266,7 +266,7 @@ export default function ContactForm() {
             value={formData.phoneOptional}
             onChange={handleChange}
             disabled={isSubmitting}
-            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-none text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-none text-sm text-gray-900 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
           />
         </div>
 
@@ -280,7 +280,7 @@ export default function ContactForm() {
             value={formData.inquiryType}
             onChange={handleChange}
             disabled={isSubmitting}
-            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-none text-sm text-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-none text-sm text-gray-900 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
             required
           >
             <option value="">{t.fields.inquiryType.placeholder}</option>
@@ -304,7 +304,7 @@ export default function ContactForm() {
             onChange={handleChange}
             rows={4}
             disabled={isSubmitting}
-            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-none text-sm resize-none focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-none text-sm text-gray-900 resize-none focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
             required
           />
         </div>
