@@ -7,8 +7,9 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#003893] text-white px-4 pt-8 pb-4 text-[14px] font-['IBM Plex Sans']">
-      <div className="mx-auto">
-        <div className="flex flex-col lg:flex-row justify-between gap-2">
+      <div className="mx-auto max-w-[1400px]">
+        <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12">
+          {/* LEFT BRAND SECTION */}
           <div className="lg:ml-12 lg:w-[320px]">
             <div className="mb-1 text-[24px] font-semibold tracking-[0.03em]">
               eShasan
@@ -18,10 +19,12 @@ export default function Footer() {
               {t.brandDescription}
             </p>
 
+            {/* SOCIAL ICONS */}
             <div className="flex gap-3">
               <a
                 href="https://www.facebook.com/infosysninja"
                 target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="flex h-[32px] w-[32px] items-center justify-center rounded-full border border-white/60 !text-white transition hover:bg-white/20"
               >
@@ -33,6 +36,7 @@ export default function Footer() {
               <a
                 href="https://x.com/NinjaPvt"
                 target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Twitter / X"
                 className="flex h-[32px] w-[32px] items-center justify-center rounded-full border border-white/60 !text-white transition hover:bg-white/20"
               >
@@ -44,6 +48,7 @@ export default function Footer() {
               <a
                 href="https://www.linkedin.com/company/ninja-infosys-official/posts/?feedView=all"
                 target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="flex h-[32px] w-[32px] items-center justify-center rounded-full border border-white/60 !text-white transition hover:bg-white/20"
               >
@@ -54,83 +59,90 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex gap-12 lg:gap-20">
-            <div className="min-w-[140px]">
+          {/* RIGHT COLUMNS SECTION */}
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 xl:gap-20">
+            {/* MODULES COLUMN */}
+            <div>
               <h4 className="mb-2 text-[14px] font-semibold">{t.modules.title}</h4>
-              <p className="block opacity-90 text-white">{t.modules.governance}</p>
-              <p className="block opacity-90 text-white">{t.modules.finance}</p>
-              <p className="block opacity-90 text-white">{t.modules.hrManagement}</p>
-              <p className="block opacity-90 text-white">{t.modules.analytics}</p>
+              <p className="block opacity-90 text-white mb-1">{t.modules.governance}</p>
+              <p className="block opacity-90 text-white mb-1">{t.modules.finance}</p>
+              <p className="block opacity-90 text-white mb-1">{t.modules.hrManagement}</p>
+              <p className="block opacity-90 text-white mb-1">{t.modules.analytics}</p>
+              <p className="block opacity-90 text-white mb-1">{t.modules.infrastructure}</p>
             </div>
 
-            <div className="min-w-[140px]">
+            {/* COMPANY COLUMN */}
+            <div>
               <h4 className="mb-2 text-[14px] font-semibold">{t.company.title}</h4>
-              <a href="/about" className="block opacity-90 !text-white font-normal! hover:underline! ">
+              <a href="/about" className="block opacity-90 !text-white font-normal hover:underline mb-1">
                 {t.company.about}
               </a>
-              <a href="/products" className="block opacity-90 !text-white font-normal! hover:underline! ">
+              <a href="/products" className="block opacity-90 !text-white font-normal hover:underline mb-1">
                 {t.company.products}
               </a>
-              <a href="/solutions" className="block opacity-90 !text-white font-normal! hover:underline! ">
+              <a href="/solutions" className="block opacity-90 !text-white font-normal hover:underline mb-1">
                 {t.company.solutions}
               </a>
-              <a href="/resources" className="block opacity-90 !text-white font-normal! hover:underline! ">
+              <a href="/resources" className="block opacity-90 !text-white font-normal hover:underline mb-1">
                 {t.company.resources}
               </a>
-              <a href="/contact" className="block opacity-90 !text-white font-normal! hover:underline! ">
+              <a href="/contact" className="block opacity-90 !text-white font-normal hover:underline mb-1">
                 {t.company.contact}
               </a>
             </div>
 
-            <div className="min-w-[200px]">
+            {/* GET IN TOUCH COLUMN */}
+            <div className="col-span-2 lg:col-span-1">
               <h4 className="mb-2 text-[14px] font-semibold">{t.getInTouch.title}</h4>
 
-              <div className="my-1 flex items-center gap-2">
-                <svg className="h-[18px] w-[18px] fill-current shrink-0" viewBox="0 0 24 24">
+              <div className="my-1 flex items-start gap-2">
+                <svg className="h-[18px] w-[18px] fill-current shrink-0 mt-0.5" viewBox="0 0 24 24">
                   <path d="M12 2C8.7 2 6 4.7 6 8c0 4.1 4.7 9.6 5.3 10.3.4.4 1 .4 1.4 0C13.3 17.6 18 12.1 18 8c0-3.3-2.7-6-6-6zm0 8.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 5.5 12 5.5s2.5 1.1 2.5 2.5S13.4 10.5 12 10.5z" />
                 </svg>
-                <p className="opacity-90">{t.getInTouch.location}</p>
+                <p className="opacity-90 flex-1">{t.getInTouch.location}</p>
               </div>
 
-              <div className="my-1 flex items-center gap-2">
-                <svg className="h-[18px] w-[18px] fill-current shrink-0" viewBox="0 0 24 24">
+              <div className="my-1 flex items-start gap-2">
+                <svg className="h-[18px] w-[18px] fill-current shrink-0 mt-0.5" viewBox="0 0 24 24">
                   <path d="M4 6c-.8 0-1.5.7-1.5 1.5v9c0 .8.7 1.5 1.5 1.5h16c.8 0 1.5-.7 1.5-1.5v-9C21.5 6.7 20.8 6 20 6H4zm.7 2h14.6L12 12.8 4.7 8zM4.5 9.4l7 4.2c.3.2.7.2 1 0l7-4.2V16H4.5V9.4z" />
                 </svg>
-                <p className="opacity-90">{t.getInTouch.email}</p>
+                <p className="opacity-90 flex-1 break-words">{t.getInTouch.email}</p>
               </div>
 
-              <div className="my-1 flex items-center gap-2">
-                <svg className="h-[18px] w-[18px] fill-current shrink-0" viewBox="0 0 24 24">
+              <div className="my-1 flex items-start gap-2">
+                <svg className="h-[18px] w-[18px] fill-current shrink-0 mt-0.5" viewBox="0 0 24 24">
                   <path d="M6.6 4.5L8.2 4c.5-.1 1 .1 1.3.5l1.4 2.3c.3.5.2 1.1-.2 1.5l-1 1c.2.5.6 1.2 1.3 1.9.7.7 1.4 1.1 1.9 1.3l1-1c.4-.4 1-.5 1.5-.2l2.3 1.4c.4.3.6.8.5 1.3l-.5 1.6c-.2.5-.6.9-1.1 1.1-.7.2-2.2.3-4.4-.9-2-.9-3.7-2.4-5.2-4.4-1.5-2-2.2-3.8-2.4-5-.1-.6.1-1.1.5-1.5.3-.3.6-.5 1-.6z" />
                 </svg>
-                <p className="opacity-90">{t.getInTouch.phone1}</p>
+                <p className="opacity-90 flex-1">{t.getInTouch.phone1}</p>
               </div>
 
-              <div className="my-1 flex items-center gap-2">
-                <svg className="h-[18px] w-[18px] fill-current shrink-0" viewBox="0 0 24 24">
+              <div className="my-1 flex items-start gap-2">
+                <svg className="h-[18px] w-[18px] fill-current shrink-0 mt-0.5" viewBox="0 0 24 24">
                   <path d="M6.6 4.5L8.2 4c.5-.1 1 .1 1.3.5l1.4 2.3c.3.5.2 1.1-.2 1.5l-1 1c.2.5.6 1.2 1.3 1.9.7.7 1.4 1.1 1.9 1.3l1-1c.4-.4 1-.5 1.5-.2l2.3 1.4c.4.3.6.8.5 1.3l-.5 1.6c-.2.5-.6.9-1.1 1.1-.7.2-2.2.3-4.4-.9-2-.9-3.7-2.4-5.2-4.4-1.5-2-2.2-3.8-2.4-5-.1-.6.1-1.1.5-1.5.3-.3.6-.5 1-.6z" />
                 </svg>
-                <p className="opacity-90">{t.getInTouch.phone2}</p>
+                <p className="opacity-90 flex-1">{t.getInTouch.phone2}</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="mx-auto mt-6 mb-4 max-w-[1380px] border-t border-white/30" />
+      {/* DIVIDER */}
+      <div className="mx-auto mt-6 mb-4 max-w-[1400px] border-t border-white/30" />
 
-      <div className="mx-auto flex max-w-[1380px] flex-wrap items-center justify-between gap-4 text-[12px]">
+      {/* BOTTOM SECTION */}
+      <div className="mx-auto flex max-w-[1400px] flex-col sm:flex-row items-center justify-between gap-4 text-[12px]">
         <div className="flex items-center gap-1">
           <span className="text-[12px]">©</span>
           <span>{t.copyright}</span>
         </div>
 
         <div className="flex items-center gap-2">
-          <a href="/terms-and-conditions" className="!text-white font-normal! hover:underline! ">
+          <a href="/terms-and-conditions" className="!text-white font-normal hover:underline">
             {t.privacyPolicy}
           </a>
           <span className="opacity-70">|</span>
-          <a href="/terms-and-conditions" className="!text-white font-normal! hover:underline! ">
+          <a href="/terms-and-conditions" className="!text-white font-normal hover:underline">
             {t.termsOfService}
           </a>
         </div>
