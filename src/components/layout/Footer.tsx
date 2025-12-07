@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1400px]">
         <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12">
           {/* LEFT BRAND SECTION */}
-          <div className="lg:ml-12 lg:w-[320px]">
+          <div className="lg:ml-4">
             <div className="mb-1 text-[24px] font-semibold tracking-[0.03em]">
               eShasan
             </div>
@@ -128,10 +128,10 @@ export default function Footer() {
       </div>
 
       {/* DIVIDER */}
-      <div className="mx-auto mt-6 mb-4 max-w-[1400px] border-t border-white/30" />
+      <div className="mx-auto mt-6 mb-4 max-w-[1380px] border-t border-white/30" />
 
       {/* BOTTOM SECTION */}
-      <div className="mx-auto flex max-w-[1400px] flex-col sm:flex-row items-center justify-between gap-4 text-[12px]">
+      <div className="mx-auto flex max-w-[1380px] flex-col sm:flex-row items-start sm:items-center sm:justify-between gap-2 sm:gap-4 text-[12px]">
         <div className="flex items-center gap-1">
           <span className="text-[12px]">©</span>
           <span>{t.copyright}</span>
