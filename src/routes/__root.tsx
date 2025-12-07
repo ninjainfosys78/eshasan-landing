@@ -29,3 +29,24 @@ export const Route = createRootRoute({
   ),
   notFoundComponent: NotFound,
 });
+
+<script type="application/ld+json">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "eShasan",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "E-Governance platform for digital transformation",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Ninja Infosys",
+      "url": "https://ninjainfosys.com",
+    },
+  })}
+</script>;
