@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
 import { useLanguageStore } from "@/store/Language-store";
 import { translations } from "@/i18n/translations";
+import { Link } from "@tanstack/react-router";
 
 export default function Header() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -47,50 +48,50 @@ export default function Header() {
       >
         <div className="max-w-[1400px] w-full mx-auto flex items-center justify-between gap-5 h-[72px] px-4 md:px-3 sm:px-2">
           {/* Brand (left) */}
-          <a
-            href="/"
+          <Link
+            to="/"
             className="shrink-0 font-bold! text-[28px] leading-none text-[#003893]! no-underline cursor-pointer"
           >
             eShasan
-          </a>
+          </Link>
 
           {/* Centered nav - desktop only */}
           <nav
             className="hidden md:flex flex-1 justify-center gap-8 items-center"
             aria-label="Primary"
           >
-            <a
-              href="/products"
+            <Link
+              to="/products"
               className={`text-[16px] font-normal! no-underline hover:text-[#003893]! cursor-pointer ${
                 isActive("/products") ? "text-[#003893]!" : "text-[#000000]!"
               }`}
             >
               {t.products}
-            </a>
-            <a
-              href="/solutions"
+            </Link>
+            <Link
+              to="/solutions"
               className={`text-[16px] font-normal! no-underline hover:text-[#003893]! cursor-pointer ${
                 isActive("/solutions") ? "text-[#003893]!" : "text-[#000000]!"
               }`}
             >
               {t.solutions}
-            </a>
-            <a
-              href="/resources"
+            </Link>
+            <Link
+              to="/resources"
               className={`text-[16px] font-normal! no-underline hover:text-[#003893]! cursor-pointer ${
                 isActive("/resources") ? "text-[#003893]!" : "text-[#000000]!"
               }`}
             >
               {t.resources}
-            </a>
-            <a
-              href="/about"
+            </Link>
+            <Link
+              to="/about"
               className={`text-[16px] font-normal! no-underline hover:text-[#003893]! cursor-pointer ${
                 isActive("/about") ? "text-[#003893]!" : "text-[#000000]!"
               }`}
             >
               {t.about}
-            </a>
+            </Link>
           </nav>
 
           {/* Actions (right) */}
@@ -105,7 +106,6 @@ export default function Header() {
                 }
               >
                 <Globe className="w-4 h-4" />
-                {/* fixed width to prevent shift between English / नेपाली */}
                 <span className="inline-block w-[70px] text-left">
                   {t.language}
                 </span>
@@ -153,15 +153,15 @@ export default function Header() {
             </div>
 
             {/* Desktop CTA */}
-            <Button
-              size="cta"
-              className="hidden md:inline-flex bg-[#003893]! text-white! rounded-none! border-none! hover:bg-[#002f7a]! md:w-36 md:h-10 md:text-[15px]! lg:w-40 lg:h-12 lg:text-[16px]! cursor-pointer"
-              onClick={() => (window.location.href = "/contact")}
-              aria-label="Contact Sales"
-            >
-              {t.contactSales}
-            </Button>
-
+            <Link to="/contact">
+              <Button
+                size="cta"
+                className="hidden md:inline-flex bg-[#003893]! text-white! rounded-none! border-none! hover:bg-[#002f7a]! md:w-36 md:h-10 md:text-[15px]! lg:w-40 lg:h-12 lg:text-[16px]! cursor-pointer"
+                aria-label="Contact Sales"
+              >
+                {t.contactSales}
+              </Button>
+            </Link>
 
             {/* Mobile menu button */}
             <button
@@ -191,8 +191,8 @@ export default function Header() {
         <div className="fixed left-0 right-0 top-[72px] bottom-0 bg-white md:hidden z-[45]">
           <div className="max-w-[1230px] w-full mx-auto px-4 pt-4 pb-6">
             <nav aria-label="Mobile primary">
-              <a
-                href="/products"
+              <Link
+                to="/products"
                 className={`block py-4 text-[16px] font-normal! no-underline hover:bg-[#003893] hover:text-white! cursor-pointer ${
                   isActive("/products")
                     ? "bg-[#003893] text-white!"
@@ -201,9 +201,9 @@ export default function Header() {
                 onClick={() => setIsMobileOpen(false)}
               >
                 {t.products}
-              </a>
-              <a
-                href="/solutions"
+              </Link>
+              <Link
+                to="/solutions"
                 className={`block py-4 text-[16px] font-normal! no-underline hover:bg-[#003893] hover:text-white! cursor-pointer ${
                   isActive("/solutions")
                     ? "bg-[#003893] text-white!"
@@ -212,9 +212,9 @@ export default function Header() {
                 onClick={() => setIsMobileOpen(false)}
               >
                 {t.solutions}
-              </a>
-              <a
-                href="/resources"
+              </Link>
+              <Link
+                to="/resources"
                 className={`block py-4 text-[16px] font-normal! no-underline hover:bg-[#003893] hover:text-white! cursor-pointer ${
                   isActive("/resources")
                     ? "bg-[#003893] text-white!"
@@ -223,10 +223,10 @@ export default function Header() {
                 onClick={() => setIsMobileOpen(false)}
               >
                 {t.resources}
-              </a>
-              <a
-                href="/about"
-                className={`block py-4 text-[16px] font-normal! no-underline hover:bg-[#003893] hover:text-white! cursor-pointer ${
+              </Link>
+              <Link
+                to="/about"
+                className={`block py-4 text-[16px] font-normal! no-underline hover:text-[#003893] hover:text-white! cursor-pointer ${
                   isActive("/about")
                     ? "bg-[#003893] text-white!"
                     : "text-[#000000]!"
@@ -234,10 +234,10 @@ export default function Header() {
                 onClick={() => setIsMobileOpen(false)}
               >
                 {t.about}
-              </a>
+              </Link>
 
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className={`block py-4 text-[16px] font-normal! no-underline hover:bg-[#003893] hover:text-white! cursor-pointer ${
                   isActive("/contact")
                     ? "bg-[#003893] text-white!"
@@ -246,7 +246,7 @@ export default function Header() {
                 onClick={() => setIsMobileOpen(false)}
               >
                 {t.contactSales}
-              </a>
+              </Link>
             </nav>
           </div>
         </div>
