@@ -157,7 +157,7 @@ export default function Header() {
               <Button
                 size="cta"
                 className="hidden md:inline-flex bg-[#003893]! text-white! rounded-none! border-none! hover:bg-[#002f7a]! md:w-36 md:h-10 md:text-[15px]! lg:w-40 lg:h-12 lg:text-[16px]! cursor-pointer"
-                aria-label="Contact Sales"
+                aria-label="Contact"
               >
                 {t.contactSales}
               </Button>

@@ -25,7 +25,7 @@ function ResourcePage() {
           <h1 className="m-0 text-[26px] sm:text-[32px] font-bold text-[#000000]">
             {t.title}
           </h1>
-          <p className="mt-3 text-sm sm:text-base font-normal text-slate-600">
+          <p className="mt-3 text-sm sm:text-base font-normal text-[#4B5563]">
             {t.subtitle}
           </p>
 

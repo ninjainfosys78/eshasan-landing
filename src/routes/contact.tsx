@@ -47,7 +47,7 @@ function ContactPage() {
               <h1 className="text-5xl font-bold text-gray-900 mb-6">
                 {t.hero.title}
               </h1>
-              <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+              <p className="text-[#4B5563] max-w-3xl mx-auto text-lg">
                 {t.hero.subtitle}
               </p>
             </div>
