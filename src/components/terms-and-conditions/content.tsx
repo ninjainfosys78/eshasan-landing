@@ -2,10 +2,14 @@ import {
   Card,
   CardContent,
   CardHeader,
-  CardTitle,
 } from "../ui/card";
+import { useLanguageStore } from "@/store/Language-store";
+import { termsTranslations } from "@/i18n/terms-translation";
 
 export default function TermsContent() {
+  const { language } = useLanguageStore();
+  const t = termsTranslations[language];
+
   return (
     <section className="py-12 bg-white">
       <div className="max-w-[1230px] mx-auto px-4">
@@ -14,73 +18,25 @@ export default function TermsContent() {
           <aside className="w-full md:w-[280px] flex-shrink-0 md:sticky md:top-24 self-start overflow-x-auto md:overflow-x-visible">
             <Card className="border-gray-200 rounded-none min-w-[280px]">
               <CardHeader className="p-6">
-                <CardTitle className="text-[18px] font-bold text-[#000000]">
-                  Table of Contents
-                </CardTitle>
+                <h2 className="text-[18px] font-bold text-[#000000]">
+                  {t.tableOfContents.title}
+                </h2>
               </CardHeader>
               
               <CardContent className="px-6 pb-6">
-                <nav className="space-y-4">
-                  <div className="flex items-start gap-3 text-[14px] text-slate-600">
-                    <span className="text-slate-400">01</span>
-                    <span>Acceptance of Terms</span>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 text-[14px] text-slate-600">
-                    <span className="text-slate-400">02</span>
-                    <span>Use of Services</span>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 text-[14px] text-slate-600">
-                    <span className="text-slate-400">03</span>
-                    <span>User Accounts</span>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 text-[14px] text-slate-600">
-                    <span className="text-slate-400">04</span>
-                    <span>User Content</span>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 text-[14px] text-slate-600">
-                    <span className="text-slate-400">05</span>
-                    <span>Privacy Policy</span>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 text-[14px] text-slate-600">
-                    <span className="text-slate-400">06</span>
-                    <span>Intellectual Property</span>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 text-[14px] text-slate-600">
-                    <span className="text-slate-400">07</span>
-                    <span>Prohibited Activities</span>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 text-[14px] text-slate-600">
-                    <span className="text-slate-400">08</span>
-                    <span>Termination</span>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 text-[14px] text-slate-600">
-                    <span className="text-slate-400">09</span>
-                    <span>Limitation of Liability</span>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 text-[14px] text-slate-600">
-                    <span className="text-slate-400">10</span>
-                    <span>Changes to Terms</span>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 text-[14px] text-slate-600">
-                    <span className="text-slate-400">11</span>
-                    <span>Contact Information</span>
-                  </div>
+                <nav className="space-y-4" aria-label="Terms sections">
+                  {t.tableOfContents.items.map((item, index) => (
+                    <div key={index} className="flex items-start gap-3 text-[14px] text-[#4B5563]">
+                      <span className="text-[#6B7280] font-medium" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                      <span>{item}</span>
+                    </div>
+                  ))}
                 </nav>
               </CardContent>
             </Card>
           </aside>
 
-          {/* Right content area (Scrollable with fixed height) - Hidden scrollbar */}
+          {/* Right content area */}
           <div className="flex-1 min-w-0 md:sticky md:top-24 md:overflow-y-auto md:max-h-[calc(100vh-8rem)] md:pr-4 
                           [&::-webkit-scrollbar]:w-0 
                           [&::-webkit-scrollbar]:bg-transparent
@@ -88,300 +44,206 @@ export default function TermsContent() {
                           [scrollbar-width:none]">
             {/* Legal Agreement Header */}
             <div className="mb-8">
-              <span className="text-[#003893] text-[14px] font-medium">Legal Agreement</span>
+              <span className="text-[#003893] text-[14px] font-medium">{t.legalAgreement}</span>
             </div>
 
             {/* Welcome Section */}
             <div className="mb-12">
               <h2 className="text-[24px] font-bold text-[#000000] mb-6">
-                Welcome to Our Service
+                {t.welcome.title}
               </h2>
               
-              <p className="text-[16px] text-slate-700 mb-4 leading-relaxed">
-                These Terms and Conditions ("Terms") govern your access to and use of our services, including our website, applications, and any related services (collectively, the "Services").
+              <p className="text-[16px] text-[#374151] mb-4 leading-relaxed">
+                {t.welcome.description1}
               </p>
               
-              <p className="text-[16px] text-slate-700 leading-relaxed">
-                By accessing or using our Services, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our Services.
+              <p className="text-[16px] text-[#374151] leading-relaxed">
+                {t.welcome.description2}
               </p>
             </div>
 
-            {/* Section 1 */}
+            {/* Section 1 - Acceptance of Terms */}
             <div className="mb-12">
               <div className="flex items-start gap-4 mb-6">
-                <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center">
+                <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center" aria-hidden="true">
                   01
                 </span>
                 <h3 className="text-[20px] font-bold text-[#000000] mt-2">
-                  Acceptance of Terms
+                  {t.sections.acceptanceOfTerms.title}
                 </h3>
               </div>
               
               <div className="space-y-4">
-                <p className="text-[15px] text-slate-700 leading-relaxed">
-                  By creating an account or using our Services, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy.
-                </p>
-                
-                <p className="text-[15px] text-slate-700 leading-relaxed">
-                  If you are using the Services on behalf of an organization, you represent and warrant that you have the authority to bind that organization to these Terms.
-                </p>
+                {t.sections.acceptanceOfTerms.content.map((paragraph, index) => (
+                  <p key={index} className="text-[15px] text-[#374151] leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
               </div>
             </div>
 
-            {/* Section 2 */}
+            {/* Section 2 - Use of Services */}
             <div className="mb-12">
               <div className="flex items-start gap-4 mb-6">
-                <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center">
+                <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center" aria-hidden="true">
                   02
                 </span>
                 <h3 className="text-[20px] font-bold text-[#000000] mt-2">
-                  Use of Services
+                  {t.sections.useOfServices.title}
                 </h3>
               </div>
               
               <div className="space-y-4">
-                <p className="text-[15px] text-slate-700 leading-relaxed">
-                  Our Services are provided to you for your personal or internal business use. You agree to use the Services only for lawful purposes and in accordance with these Terms.
-                </p>
+                {t.sections.useOfServices.content.map((paragraph, index) => (
+                  <p key={index} className="text-[15px] text-[#374151] leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
 
                 <div className="border border-gray-200 bg-gray-50 p-6 rounded-none">
-                  <p className="text-[15px] font-semibold text-slate-900 mb-3">You agree not to:</p>
+                  <p className="text-[15px] font-semibold text-[#111827] mb-3">
+                    {t.sections.useOfServices.notAllowed.title}
+                  </p>
                   <div className="space-y-2">
-                    <p className="text-[15px] text-slate-700">Use the Services in any way that violates applicable laws or regulations</p>
-                    <p className="text-[15px] text-slate-700">Attempt to gain unauthorized access to any portion of the Services</p>
-                    <p className="text-[15px] text-slate-700">Interfere with or disrupt the Services or servers</p>
-                    <p className="text-[15px] text-slate-700">Use any automated system to access the Services</p>
+                    {t.sections.useOfServices.notAllowed.items.map((item, index) => (
+                      <p key={index} className="text-[15px] text-[#374151]">{item}</p>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Section 3 */}
-            <div className="mb-12">
-              <div className="flex items-start gap-4 mb-6">
-                <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center">
-                  03
-                </span>
-                <h3 className="text-[20px] font-bold text-[#000000] mt-2">
-                  User Accounts
-                </h3>
-              </div>
-              
-              <div className="space-y-4">
-                <p className="text-[15px] text-slate-700 leading-relaxed">
-                  To access certain features of our Services, you may be required to create an account. You are responsible for maintaining the confidentiality of your account credentials.
-                </p>
+            {/* Sections 3-6 */}
+            {Object.entries({
+              '03': t.sections.userAccounts,
+              '04': t.sections.userContent,
+              '05': t.sections.privacyPolicy,
+              '06': t.sections.intellectualProperty,
+            }).map(([num, section]) => (
+              <div key={num} className="mb-12">
+                <div className="flex items-start gap-4 mb-6">
+                  <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center" aria-hidden="true">
+                    {num}
+                  </span>
+                  <h3 className="text-[20px] font-bold text-[#000000] mt-2">
+                    {section.title}
+                  </h3>
+                </div>
                 
-                <p className="text-[15px] text-slate-700 leading-relaxed">
-                  You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete.
-                </p>
+                <div className="space-y-4">
+                  {section.content.map((paragraph: string, index: number) => (
+                    <p key={index} className="text-[15px] text-[#374151] leading-relaxed">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
               </div>
-            </div>
+            ))}
 
-            {/* Section 4 */}
+            {/* Section 7 - Prohibited Activities */}
             <div className="mb-12">
               <div className="flex items-start gap-4 mb-6">
-                <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center">
-                  04
-                </span>
-                <h3 className="text-[20px] font-bold text-[#000000] mt-2">
-                  User Content
-                </h3>
-              </div>
-              
-              <div className="space-y-4">
-                <p className="text-[15px] text-slate-700 leading-relaxed">
-                  Our Services may allow you to submit, upload, or share content ("User Content"). You retain all rights to your User Content, but you grant us a license to use, modify, and display your User Content in connection with providing the Services.
-                </p>
-                
-                <p className="text-[15px] text-slate-700 leading-relaxed">
-                  You represent and warrant that you own or have the necessary rights to all User Content you submit and that such content does not violate any third-party rights or applicable laws.
-                </p>
-              </div>
-            </div>
-
-            {/* Section 5 */}
-            <div className="mb-12">
-              <div className="flex items-start gap-4 mb-6">
-                <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center">
-                  05
-                </span>
-                <h3 className="text-[20px] font-bold text-[#000000] mt-2">
-                  Privacy Policy
-                </h3>
-              </div>
-              
-              <div className="space-y-4">
-                <p className="text-[15px] text-slate-700 leading-relaxed">
-                  Your privacy is important to us. Please review our Privacy Policy, which describes how we collect, use, and disclose information about you.
-                </p>
-                
-                <p className="text-[15px] text-slate-700 leading-relaxed">
-                  By using our Services, you consent to our collection and use of personal data as outlined in our Privacy Policy.
-                </p>
-              </div>
-            </div>
-
-            {/* Section 6 */}
-            <div className="mb-12">
-              <div className="flex items-start gap-4 mb-6">
-                <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center">
-                  06
-                </span>
-                <h3 className="text-[20px] font-bold text-[#000000] mt-2">
-                  Intellectual Property
-                </h3>
-              </div>
-              
-              <div className="space-y-4">
-                <p className="text-[15px] text-slate-700 leading-relaxed">
-                  The Services and all content, features, and functionality are owned by us and are protected by copyright, trademark, and other intellectual property laws.
-                </p>
-                
-                <p className="text-[15px] text-slate-700 leading-relaxed">
-                  You may not reproduce, distribute, modify, create derivative works of, publicly display, or exploit any of our content without our prior written permission.
-                </p>
-              </div>
-            </div>
-
-            {/* Section 7 */}
-            <div className="mb-12">
-              <div className="flex items-start gap-4 mb-6">
-                <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center">
+                <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center" aria-hidden="true">
                   07
                 </span>
                 <h3 className="text-[20px] font-bold text-[#000000] mt-2">
-                  Prohibited Activities
+                  {t.sections.prohibitedActivities.title}
                 </h3>
               </div>
               
               <div className="space-y-4">
-                <p className="text-[15px] text-slate-700 leading-relaxed mb-4">
-                  You agree not to engage in any of the following prohibited activities:
+                <p className="text-[15px] text-[#374151] leading-relaxed mb-4">
+                  {t.sections.prohibitedActivities.intro}
                 </p>
 
                 <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <span className="flex-shrink-0 w-7 h-7 bg-red-50 border border-red-200 rounded-none flex items-center justify-center text-red-500 text-[12px]">✕</span>
-                    <p className="text-[15px] text-slate-700 flex-1">Copying, distributing, or disclosing any part of the Services without authorization</p>
-                  </div>
-                  
-                  <div className="flex items-center gap-3">
-                    <span className="flex-shrink-0 w-7 h-7 bg-red-50 border border-red-200 rounded-none flex items-center justify-center text-red-500 text-[12px]">✕</span>
-                    <p className="text-[15px] text-slate-700 flex-1">Using any automated system or software to extract data from the Services</p>
-                  </div>
-                  
-                  <div className="flex items-center gap-3">
-                    <span className="flex-shrink-0 w-7 h-7 bg-red-50 border border-red-200 rounded-none flex items-center justify-center text-red-500 text-[12px]">✕</span>
-                    <p className="text-[15px] text-slate-700 flex-1">Attempting to interfere with, compromise, or reverse engineer the Services</p>
-                  </div>
-                  
-                  <div className="flex items-center gap-3">
-                    <span className="flex-shrink-0 w-7 h-7 bg-red-50 border border-red-200 rounded-none flex items-center justify-center text-red-500 text-[12px]">✕</span>
-                    <p className="text-[15px] text-slate-700 flex-1">Harassing, abusing, or harming other users or third parties</p>
-                  </div>
+                  {t.sections.prohibitedActivities.items.map((item, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <span className="flex-shrink-0 w-7 h-7 bg-red-50 border border-red-200 rounded-none flex items-center justify-center text-red-500 text-[12px]" aria-hidden="true">✕</span>
+                      <p className="text-[15px] text-[#374151] flex-1">{item}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
 
-            {/* Section 8 */}
-            <div className="mb-12">
-              <div className="flex items-start gap-4 mb-6">
-                <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center">
-                  08
-                </span>
-                <h3 className="text-[20px] font-bold text-[#000000] mt-2">
-                  Termination
-                </h3>
-              </div>
-              
-              <div className="space-y-4">
-                <p className="text-[15px] text-slate-700 leading-relaxed">
-                  We may terminate or suspend your access to our Services immediately, without prior notice or liability, for any reason, including if you breach these Terms.
-                </p>
-                
-                <p className="text-[15px] text-slate-700 leading-relaxed">
-                  Upon termination, your right to use the Services will immediately cease. All provisions of these Terms which by their nature should survive termination shall survive.
-                </p>
-              </div>
-            </div>
-
-            {/* Section 9 */}
-            <div className="mb-12">
-              <div className="flex items-start gap-4 mb-6">
-                <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center">
-                  09
-                </span>
-                <h3 className="text-[20px] font-bold text-[#000000] mt-2">
-                  Limitation of Liability
-                </h3>
-              </div>
-              
-              <div className="space-y-4">
-                <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-none">
-                  <p className="text-[15px] text-slate-700 leading-relaxed">
-                    To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly.
-                  </p>
+            {/* Sections 8-10 */}
+            {Object.entries({
+              '08': t.sections.termination,
+              '09': t.sections.limitationOfLiability,
+              '10': t.sections.changesToTerms,
+            }).map(([num, section]) => (
+              <div key={num} className="mb-12">
+                <div className="flex items-start gap-4 mb-6">
+                  <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center" aria-hidden="true">
+                    {num}
+                  </span>
+                  <h3 className="text-[20px] font-bold text-[#000000] mt-2">
+                    {section.title}
+                  </h3>
                 </div>
                 
-                <p className="text-[15px] text-slate-700 leading-relaxed">
-                  Our total liability to you for any damages arising out of or related to these Terms or the Services shall not exceed the amount you have paid us in the past twelve months.
-                </p>
+                <div className="space-y-4">
+                  {num === '09' && (
+                    <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-none">
+                      <p className="text-[15px] text-[#374151] leading-relaxed">
+                        {section.content[0]}
+                      </p>
+                    </div>
+                  )}
+                  {section.content.map((paragraph: string, index: number) => (
+                    num === '09' && index === 0 ? null : (
+                      <p key={index} className="text-[15px] text-[#374151] leading-relaxed">
+                        {paragraph}
+                      </p>
+                    )
+                  ))}
+                </div>
               </div>
-            </div>
+            ))}
 
-            {/* Section 10 */}
+            {/* Section 11 - Contact Information */}
             <div className="mb-12">
               <div className="flex items-start gap-4 mb-6">
-                <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center">
-                  10
-                </span>
-                <h3 className="text-[20px] font-bold text-[#000000] mt-2">
-                  Changes to Terms
-                </h3>
-              </div>
-              
-              <div className="space-y-4">
-                <p className="text-[15px] text-slate-700 leading-relaxed">
-                  We reserve the right to modify or replace these Terms at any time. We will provide notice of any material changes by posting the new Terms on this page and updating the "Last updated" date.
-                </p>
-                
-                <p className="text-[15px] text-slate-700 leading-relaxed">
-                  Your continued use of the Services after any changes become effective constitutes your acceptance of the new Terms.
-                </p>
-              </div>
-            </div>
-
-            {/* Section 11 */}
-            <div className="mb-12">
-              <div className="flex items-start gap-4 mb-6">
-                <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center">
+                <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center" aria-hidden="true">
                   11
                 </span>
                 <h3 className="text-[20px] font-bold text-[#000000] mt-2">
-                  Contact Information
+                  {t.sections.contactInformation.title}
                 </h3>
               </div>
               
               <div className="space-y-4">
-                <p className="text-[15px] text-slate-700 leading-relaxed mb-4">
-                  If you have any questions about these Terms, please contact us:
+                <p className="text-[15px] text-[#374151] leading-relaxed mb-4">
+                  {t.sections.contactInformation.intro}
                 </p>
 
                 <div className="space-y-3 pl-4">
                   <div className="flex items-start gap-3">
-                    <span className="font-semibold text-[15px] text-slate-900 min-w-[80px]">Email:</span>
-                    <span className="text-[15px] text-slate-700">info@ninjainfosys.com</span>
+                    <span className="font-semibold text-[15px] text-[#111827] min-w-[80px]">{t.sections.contactInformation.email}</span>
+                    <a 
+                      href="mailto:info@ninjainfosys.com" 
+                      className="text-[15px] text-[#003893] hover:text-[#002870] hover:underline focus:outline-2 focus:outline-[#003893]"
+                      aria-label={`Email us at ${t.sections.contactInformation.emailValue}`}
+                    >
+                      {t.sections.contactInformation.emailValue}
+                    </a>
                   </div>
                   
                   <div className="flex items-start gap-3">
-                    <span className="font-semibold text-[15px] text-slate-900 min-w-[80px]">Address:</span>
-                    <span className="text-[15px] text-slate-700">Kathmandu, Nepal</span>
+                    <span className="font-semibold text-[15px] text-[#111827] min-w-[80px]">{t.sections.contactInformation.address}</span>
+                    <span className="text-[15px] text-[#374151]">{t.sections.contactInformation.addressValue}</span>
                   </div>
                   
                   <div className="flex items-start gap-3">
-                    <span className="font-semibold text-[15px] text-slate-900 min-w-[80px]">Phone:</span>
-                    <span className="text-[15px] text-slate-700">+977-9858042433</span>
+                    <span className="font-semibold text-[15px] text-[#111827] min-w-[80px]">{t.sections.contactInformation.phone}</span>
+                    <a 
+                      href="tel:+9779858042433" 
+                      className="text-[15px] text-[#003893] hover:text-[#002870] hover:underline focus:outline-2 focus:outline-[#003893]"
+                      aria-label={`Call us at ${t.sections.contactInformation.phoneValue}`}
+                    >
+                      {t.sections.contactInformation.phoneValue}
+                    </a>
                   </div>
                 </div>
               </div>

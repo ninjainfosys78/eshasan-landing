@@ -4,63 +4,159 @@ import Footer from "../components/layout/Footer";
 import TermsContent from "../components/terms-and-conditions/content";
 import ThankYouBox from "@/components/terms-and-conditions/thankyou-box";
 import GlobalCTA from "@/components/home/global-cta";
+import { useLanguageStore } from "@/store/Language-store";
+import { termsTranslations } from "@/i18n/terms-translation";
 
 export const Route = createFileRoute("/terms-and-conditions" as any)({
   component: TermsAndConditionPage,
 });
 
 function TermsAndConditionPage() {
+  const { language } = useLanguageStore();
+  const t = termsTranslations[language].hero;
+
   return (
     <>
       <Header />
+      
+      <main>
+        <section aria-label="Terms and Condition hero" className="w-full bg-white py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="m-0 text-[32px] font-bold text-[#000000]">
+              {t.title}
+            </h1>
 
-      <section aria-label="Terms and Condition hero" className="w-screen bg-white py-12">
-        <div className="max-w-[1200px] mx-auto px-4 text-center">
-          <h1 className="m-0 text-[32px] font-bold text-[#000000]">
-            Terms & Condition
-          </h1>
+            <p className="mt-3 text-sm sm:text-base font-normal text-[#4B5563]">
+              {t.subtitle}
+            </p>
 
-          <p className="mt-4 text-[16px] text-slate-600 max-w-[820px] mx-auto">
-            A diverse group of experts united by a passion for transforming
-            local governance
-          </p>
+            {/* Decorative wave SVG with animation - Same as About page */}
+            <div className="mt-8 flex justify-center">
+              <div className="relative w-full max-w-[560px]">
+                <svg
+                  width="560"
+                  height="200"
+                  viewBox="0 0 560 120"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-full h-auto wave-svg fade-mask"
+                  aria-hidden="true"
+                >
+                  <defs>
+                    <linearGradient id="fadeGradient" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stopColor="white" stopOpacity="0" />
+                      <stop offset="18%" stopColor="white" stopOpacity="1" />
+                      <stop offset="82%" stopColor="white" stopOpacity="1" />
+                      <stop offset="100%" stopColor="white" stopOpacity="0" />
+                    </linearGradient>
 
-          {/* decorative wave SVG */}
-          <div className="mt-8 flex justify-center">
-            <svg
-              width="560"
-              height="120"
-              viewBox="0 0 560 120"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="max-w-full"
-              aria-hidden
-            >
-              <path
-                d="M0 60 C 80 20, 160 100, 240 60 C 320 20, 400 100, 480 60 C 520 40, 560 80, 560 80"
-                stroke="#D9E7FF"
-                strokeWidth="2"
-                fill="none"
-                opacity="0.9"
-              />
-              <path
-                d="M0 80 C 80 40, 160 120, 240 80 C 320 40, 400 120, 480 80 C 520 60, 560 100, 560 100"
-                stroke="#EAF2FF"
-                strokeWidth="2"
-                fill="none"
-                opacity="0.8"
-              />
-              <circle cx="140" cy="55" r="3.5" fill="#5A9BFF" />
-              <circle cx="210" cy="45" r="3.5" fill="#8DB6FF" />
-              <circle cx="330" cy="65" r="3.5" fill="#5A9BFF" />
-              <circle cx="420" cy="50" r="3.5" fill="#8DB6FF" />
-            </svg>
+                    <mask id="fadeMask">
+                      <rect width="100%" height="100%" fill="url(#fadeGradient)" />
+                    </mask>
+                  </defs>
+
+                  <g mask="url(#fadeMask)">
+                    {/* THIN, SHARP, FULLY VISIBLE WAVES */}
+                    <path
+                      d="M30 0 C 170 -5, 260 75, 560 40"
+                      stroke="#C7DBFF"
+                      strokeWidth="1.3"
+                      strokeLinecap="round"
+                      fill="none"
+                    />
+
+                    <path
+                      d="M0 35 C 300 40, 260 130, 560 75"
+                      stroke="#3B82F6"
+                      strokeWidth="1.4"
+                      strokeLinecap="round"
+                      fill="none"
+                      opacity="0.5"
+                    />
+
+                    <path
+                      d="M0 95 C 100 130, 320 20, 560 115"
+                      stroke="#C7DBFF"
+                      strokeWidth="1.2"
+                      strokeLinecap="round"
+                      fill="none"
+                    />
+
+                    {/* FLOATING, BLINKING BUBBLES */}
+                    <circle cx="0" cy="52" r="3.5" className="dot dot-1" fill="#5A9BFF" />
+                    <circle cx="0" cy="64" r="3.5" className="dot dot-2" fill="#8DB6FF" />
+                    <circle cx="0" cy="72" r="3.5" className="dot dot-3" fill="#5A9BFF" />
+                    <circle cx="0" cy="48" r="3.5" className="dot dot-4" fill="#8DB6FF" />
+                    <circle cx="0" cy="82" r="3.5" className="dot dot-5" fill="#5A9BFF" />
+                    <circle cx="0" cy="58" r="3.5" className="dot dot-6" fill="#8DB6FF" />
+                    <circle cx="0" cy="68" r="3.5" className="dot dot-7" fill="#5A9BFF" />
+                  </g>
+                </svg>
+              </div>
+
+              <style>{`
+                .wave-svg {
+                  overflow: visible;
+                }
+
+                .dot {
+                  animation:
+                    dotFloat 8s linear infinite both,
+                    dotBlink 3s ease-in-out infinite both;
+                  transform-origin: center;
+                }
+
+                /* visible on first frame */
+                .dot-1 { animation-delay: -0s, -0s; }
+                .dot-2 { animation-delay: -1s, -1.2s; }
+                .dot-3 { animation-delay: -2s, -2.4s; }
+                .dot-4 { animation-delay: -3s, -3.6s; }
+                .dot-5 { animation-delay: -4s, -4.8s; }
+                .dot-6 { animation-delay: -5s, -6.0s; }
+                .dot-7 { animation-delay: -6s, -7.2s; }
+
+                @keyframes dotFloat {
+                  0% {
+                    opacity: 0;
+                    transform: translateX(-120px) translateY(0px) scale(0.6);
+                  }
+                  10% {
+                    transform: translateX(-40px) translateY(-2px) scale(0.9);
+                  }
+                  35% {
+                    transform: translateX(160px) translateY(-4px) scale(1.05);
+                  }
+                  60% {
+                    transform: translateX(340px) translateY(-3px) scale(1);
+                  }
+                  90% {
+                    opacity: 0;
+                    transform: translateX(520px) translateY(-1px) scale(0.7);
+                  }
+                  100% {
+                    opacity: 0;
+                    transform: translateX(560px) translateY(0px) scale(0.6);
+                  }
+                }
+
+                @keyframes dotBlink {
+                  0% { opacity: 0; }
+                  20% { opacity: 1; }
+                  40% { opacity: 0.3; }
+                  60% { opacity: 1; }
+                  80% { opacity: 0.2; }
+                  100% { opacity: 0; }
+                }
+              `}</style>
+            </div>
           </div>
-        </div>
-      </section>
-      <TermsContent />
-      <ThankYouBox />
-      <GlobalCTA />
+        </section>
+        
+        <TermsContent />
+        <ThankYouBox />
+        <GlobalCTA />
+      </main>
+      
       <Footer />
     </>
   );

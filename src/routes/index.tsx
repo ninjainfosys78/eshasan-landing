@@ -17,13 +17,15 @@ function HomePage() {
   return (
     <>
       <Header />
-      <Hero />
-      <Testimonials />
-      <InteractionModel />
-      <CoreValue />
-      <BuiltForScale />
-      <UseCases />
-      <GlobalCTA />
+      <main>
+        <Hero />
+        <Testimonials />
+        <InteractionModel />
+        <CoreValue />
+        <BuiltForScale />
+        <UseCases />
+        <GlobalCTA />
+      </main>
       <Footer />
     </>
   );
