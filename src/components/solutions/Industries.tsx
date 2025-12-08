@@ -64,7 +64,7 @@ export default function Industries() {
           <h2 className="text-[28px] font-bold text-[#000000] mb-2">
             {t.heading}
           </h2>
-          <p className="text-[16px] text-[#6B7280]">
+          <p className="text-[16px] text-[#374151]">
             {t.subtitle}
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function Industries() {
               </CardHeader>
 
               <CardContent className="px-6 pb-6 pt-3 text-center">
-                <p className="text-sm text-[#6B7280]">
+                <p className="text-sm text-[#374151]">
                   {industry.desc}
                 </p>
               </CardContent>

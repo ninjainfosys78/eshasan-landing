@@ -14,7 +14,7 @@ export default function PlatformHighlights() {
           <h2 className="text-[28px] font-bold text-[#000000] mb-3">
             {t.heading}
           </h2>
-          <p className="text-[16px] text-[#6B7280]">
+          <p className="text-[16px] text-[#4B5563]">
             {t.subtitle}
           </p>
         </div>
@@ -22,46 +22,46 @@ export default function PlatformHighlights() {
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           <Card className="border-gray-300 bg-transparent shadow-none hover:shadow-none">
             <CardHeader className="flex flex-col items-center gap-3 pb-2 text-center px-6 pt-6">
-              <Layers className="h-6 w-6 text-black" strokeWidth={1.5} />
+              <Layers className="h-6 w-6 text-black" strokeWidth={1.5} aria-hidden="true" />
               <CardTitle className="text-[16px] font-semibold text-[#072235]">{t.scalable.title}</CardTitle>
             </CardHeader>
-            <CardContent className="pt-2 pb-6 px-6 text-center text-[13px] text-[#6B7280] leading-relaxed">
+            <CardContent className="pt-2 pb-6 px-6 text-center text-[13px] text-[#374151] leading-relaxed">
               {t.scalable.desc}
             </CardContent>
           </Card>
 
           <Card className="border-gray-300 bg-transparent shadow-none hover:shadow-none">
             <CardHeader className="flex flex-col items-center gap-3 pb-2 text-center px-6 pt-6">
-              <Lock className="h-6 w-6 text-black" strokeWidth={1.5} />
+              <Lock className="h-6 w-6 text-black" strokeWidth={1.5} aria-hidden="true" />
               <CardTitle className="text-[16px] font-semibold text-[#072235]">
                 {t.secureApis.title}
               </CardTitle>
             </CardHeader>
-            <CardContent className="pt-2 pb-6 px-6 text-center text-[13px] text-[#6B7280] leading-relaxed">
+            <CardContent className="pt-2 pb-6 px-6 text-center text-[13px] text-[#374151] leading-relaxed">
               {t.secureApis.desc}
             </CardContent>
           </Card>
 
           <Card className="border-gray-300 bg-transparent shadow-none hover:shadow-none">
             <CardHeader className="flex flex-col items-center gap-3 pb-2 text-center px-6 pt-6">
-              <PanelsTopLeft className="h-6 w-6 text-black" strokeWidth={1.5} />
+              <PanelsTopLeft className="h-6 w-6 text-black" strokeWidth={1.5} aria-hidden="true" />
               <CardTitle className="text-[16px] font-semibold text-[#072235]">
                 {t.modular.title}
               </CardTitle>
             </CardHeader>
-            <CardContent className="pt-2 pb-6 px-6 text-center text-[13px] text-[#6B7280] leading-relaxed">
+            <CardContent className="pt-2 pb-6 px-6 text-center text-[13px] text-[#374151] leading-relaxed">
               {t.modular.desc}
             </CardContent>
           </Card>
 
           <Card className="border-gray-300 bg-transparent shadow-none hover:shadow-none">
             <CardHeader className="flex flex-col items-center gap-3 pb-2 text-center px-6 pt-6">
-              <Activity className="h-6 w-6 text-black" strokeWidth={1.5} />
+              <Activity className="h-6 w-6 text-black" strokeWidth={1.5} aria-hidden="true" />
               <CardTitle className="text-[16px] font-semibold text-[#072235]">
                 {t.insights.title}
               </CardTitle>
             </CardHeader>
-            <CardContent className="pt-2 pb-6 px-6 text-center text-[13px] text-[#6B7280] leading-relaxed">
+            <CardContent className="pt-2 pb-6 px-6 text-center text-[13px] text-[#374151] leading-relaxed">
               {t.insights.desc}
             </CardContent>
           </Card>

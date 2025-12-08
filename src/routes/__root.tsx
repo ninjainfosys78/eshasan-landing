@@ -2,7 +2,7 @@ import { createRootRoute, Outlet, Link } from "@tanstack/react-router";
 
 function NotFound() {
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center px-4">
+    <main className="min-h-screen bg-white flex items-center justify-center px-4">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-[#072235] mb-4">
           404 - Page Not Found
@@ -17,15 +17,15 @@ function NotFound() {
           Go back to Home
         </Link>
       </div>
-    </div>
+    </main>
   );
 }
 
 export const Route = createRootRoute({
   component: () => (
-    <div>
+    <>
       <Outlet />
-    </div>
+    </>
   ),
   notFoundComponent: NotFound,
 });

@@ -27,7 +27,7 @@ function SolutionsPage() {
             {t.title}
           </h1>
 
-          <p className="mt-4 text-[16px] text-slate-600 max-w-[820px] mx-auto">
+          <p className="mt-4 text-[16px] text-[#4B5563] max-w-[820px] mx-auto">
             {t.subtitle}
           </p>
 

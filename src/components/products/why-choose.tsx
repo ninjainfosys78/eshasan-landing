@@ -14,7 +14,7 @@ export default function WhyChooseEshasan() {
           <h2 className="text-[28px] font-bold text-[#000000] mb-3">
             {t.heading}
           </h2>
-          <p className="text-[16px] text-[#6B7280]">
+          <p className="text-[16px] text-[#4B5563]">
             {t.subtitle}
           </p>
         </div>
@@ -22,40 +22,40 @@ export default function WhyChooseEshasan() {
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           <Card className="border-gray-200 shadow-none">
             <CardHeader className="flex flex-col items-center gap-3 pb-2 px-6 pt-6 text-center">
-              <GitMerge className="h-6 w-6 text-black" strokeWidth={1.5} />
+              <GitMerge className="h-6 w-6 text-black" strokeWidth={1.5} aria-hidden="true" />
               <CardTitle className="text-[16px] font-semibold text-[#000000]">{t.integration.title}</CardTitle>
             </CardHeader>
-            <CardContent className="pt-2 pb-6 px-6 text-[13px] text-[#6B7280] leading-relaxed text-center">
+            <CardContent className="pt-2 pb-6 px-6 text-[13px] text-[#374151] leading-relaxed text-center">
               {t.integration.desc}
             </CardContent>
           </Card>
 
           <Card className="border-gray-200 shadow-none">
             <CardHeader className="flex flex-col items-center gap-3 pb-2 px-6 pt-6 text-center">
-              <ShieldCheck className="h-6 w-6 text-black" strokeWidth={1.5} />
+              <ShieldCheck className="h-6 w-6 text-black" strokeWidth={1.5} aria-hidden="true" />
               <CardTitle className="text-[16px] font-semibold text-[#000000]">{t.security.title}</CardTitle>
             </CardHeader>
-            <CardContent className="pt-2 pb-6 px-6 text-[13px] text-[#6B7280] leading-relaxed text-center">
+            <CardContent className="pt-2 pb-6 px-6 text-[13px] text-[#374151] leading-relaxed text-center">
               {t.security.desc}
             </CardContent>
           </Card>
 
           <Card className="border-gray-200 shadow-none">
             <CardHeader className="flex flex-col items-center gap-3 pb-2 px-6 pt-6 text-center">
-              <Users className="h-6 w-6 text-black" strokeWidth={1.5} />
+              <Users className="h-6 w-6 text-black" strokeWidth={1.5} aria-hidden="true" />
               <CardTitle className="text-[16px] font-semibold text-[#000000]">{t.citizen.title}</CardTitle>
             </CardHeader>
-            <CardContent className="pt-2 pb-6 px-6 text-[13px] text-[#6B7280] leading-relaxed text-center">
+            <CardContent className="pt-2 pb-6 px-6 text-[13px] text-[#374151] leading-relaxed text-center">
               {t.citizen.desc}
             </CardContent>
           </Card>
 
           <Card className="border-gray-200 shadow-none">
             <CardHeader className="flex flex-col items-center gap-3 pb-2 px-6 pt-6 text-center">
-              <Cloud className="h-6 w-6 text-black" strokeWidth={1.5} />
+              <Cloud className="h-6 w-6 text-black" strokeWidth={1.5} aria-hidden="true" />
               <CardTitle className="text-[16px] font-semibold text-[#000000]">{t.cloud.title}</CardTitle>
             </CardHeader>
-            <CardContent className="pt-2 pb-6 px-6 text-[13px] text-[#6B7280] leading-relaxed text-center">
+            <CardContent className="pt-2 pb-6 px-6 text-[13px] text-[#374151] leading-relaxed text-center">
               {t.cloud.desc}
             </CardContent>
           </Card>
