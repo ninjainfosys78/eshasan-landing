@@ -5,7 +5,11 @@ import { routeTree } from "./routeTree.gen";
 
 import "./index.css"; 
 
-const router = createRouter({ routeTree });
+const router = createRouter({ 
+  routeTree,
+  defaultPreload: 'intent', // Preload on hover/focus
+  defaultPreloadDelay: 50,
+});
 
 declare module "@tanstack/react-router" {
   interface Register {
