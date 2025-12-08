@@ -209,7 +209,7 @@ export const translations = {
         sarah: {
           name: 'Sarah Martinez',
           title: 'Director of Digital Transformation, Metro City Council',
-          quote: 'eShasan transformed how we serve our citizens. What used to take weeks now happens in minutes. The transparency and efficiency gains have been remarkable — our citizen satisfaction scores increased by 45% in the first year.',
+          quote: 'eShasan transformed how we serve our citizens. What used to take weeks now happens in minutes.',
         },
         priya: {
           name: 'Priya Nair',
@@ -434,7 +434,7 @@ export const translations = {
         sarah: {
           name: 'साराह मार्टिनेज',
           title: 'डिजिटल रूपान्तरण निर्देशक, मेट्रो सिटी काउन्सिल',
-          quote: 'ईशासनले हामीले नागरिकहरूलाई सेवा प्रदान गर्ने तरिकालाई परिवर्तन गर्‍यो। पहिले हप्ताहरू लाग्ने काम अब मिनेटमा हुन्छ। पारदर्शिता र दक्षता लाभहरू उल्लेखनीय छन् — हाम्रो नागरिक सन्तुष्टि स्कोर पहिलो वर्षमा ४५% बढ्यो।',
+          quote: 'ईशासनले हामीले नागरिकहरूलाई सेवा प्रदान गर्ने तरिकालाई परिवर्तन गर्‍यो।',
         },
         priya: {
           name: 'प्रिया नायर',

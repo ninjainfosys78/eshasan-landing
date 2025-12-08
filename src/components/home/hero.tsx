@@ -1,8 +1,10 @@
-// src/components/home/Hero.tsx
-import WireframeGlobe from "./WireframeGlobe";
+import { lazy, Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { useLanguageStore } from "@/store/Language-store";
 import { translations } from "@/i18n/translations";
+
+// Lazy load the heavy WireframeGlobe component
+const WireframeGlobe = lazy(() => import("./WireframeGlobe"));
 
 export default function Hero() {
   const { language } = useLanguageStore();
@@ -85,7 +87,15 @@ export default function Hero() {
           "
           aria-hidden="true"
         >
-          <WireframeGlobe />
+          <Suspense
+            fallback={
+              <div className="w-[500px] h-[500px] flex items-center justify-center">
+                <div className="w-16 h-16 border-4 border-[#003893] border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            }
+          >
+            <WireframeGlobe />
+          </Suspense>
         </div>
       </div>
     </section>
