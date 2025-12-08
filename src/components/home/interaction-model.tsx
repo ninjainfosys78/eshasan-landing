@@ -50,17 +50,19 @@ export default function InteractionModel() {
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
+                                aria-pressed={isActive}
+                                aria-label={`${tab.label} interaction model`}
                                 style={{
-                                    borderColor: isActive ? "#003893" : "#b0c1de",
+                                    borderColor: isActive ? "#003893" : "#7a92b0",
                                 }}
                                 className={cn(
                                     "flex items-center gap-2 border-2 border-solid px-6 py-3 text-[14px] font-medium transition-all duration-200 sm:flex-1 cursor-pointer w-full sm:w-auto",
                                     isActive
                                         ? "bg-[#003893] text-white"
-                                        : "bg-white text-slate-700 hover:bg-gray-50 hover:border-[#003893] hover:text-[#003893]"
+                                        : "bg-white text-[#1a1a1a] hover:bg-gray-50 hover:border-[#003893] hover:text-[#003893]"
                                 )}
                             >
-                                <Icon className={cn("h-4 w-4 flex-shrink-0 transition-colors duration-200", isActive ? "text-white" : "text-slate-700 group-hover:text-[#003893]")} />
+                                <Icon className={cn("h-4 w-4 flex-shrink-0 transition-colors duration-200", isActive ? "text-white" : "text-[#1a1a1a] group-hover:text-[#003893]")} aria-hidden="true" />
                                 <span className="whitespace-nowrap">{tab.label}</span>
                             </button>
                         );
@@ -76,17 +78,19 @@ export default function InteractionModel() {
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
+                                aria-pressed={isActive}
+                                aria-label={`${tab.label} interaction model`}
                                 style={{
-                                    borderColor: isActive ? "#003893" : "#b0c1de",
+                                    borderColor: isActive ? "#003893" : "#7a92b0",
                                 }}
                                 className={cn(
                                     "flex items-center gap-2 border-2 border-solid px-6 py-3 text-[14px] font-medium transition-all duration-200 cursor-pointer w-full sm:w-auto",
                                     isActive
                                         ? "bg-[#003893] text-white"
-                                        : "bg-white text-slate-700 hover:bg-gray-50 hover:border-[#003893] hover:text-[#003893]"
+                                        : "bg-white text-[#1a1a1a] hover:bg-gray-50 hover:border-[#003893] hover:text-[#003893]"
                                 )}
                             >
-                                <Icon className={cn("h-4 w-4 flex-shrink-0 transition-colors duration-200", isActive ? "text-white" : "text-slate-700")} />
+                                <Icon className={cn("h-4 w-4 flex-shrink-0 transition-colors duration-200", isActive ? "text-white" : "text-[#1a1a1a]")} aria-hidden="true" />
                                 <span className="whitespace-nowrap">{tab.label}</span>
                             </button>
                         );
@@ -96,15 +100,15 @@ export default function InteractionModel() {
 
             {/* Content Area - Sharp corners with #b0c1de border */}
             <div className="mx-auto max-w-5xl px-5">
-                <div className="border-2 border-[#b0c1de] bg-[#E6EBF4] p-8">
+                <div className="border-2 border-[#b0c1de] bg-[#E6EBF4] p-8" role="region" aria-live="polite">
                     <div className="mb-4 flex items-start gap-3">
-                        <ActiveIcon className="h-6 w-6 text-[#003893]" />
+                        <ActiveIcon className="h-6 w-6 text-[#003893]" aria-hidden="true" />
                         <h3 className="text-[22px] font-bold text-black">
                             {t.content[activeTab as keyof typeof t.content].title}
                         </h3>
                     </div>
 
-                    <p className="mb-6 text-[15px] leading-relaxed text-slate-600">
+                    <p className="mb-6 text-[15px] leading-relaxed text-[#2c2c2c]">
                         {t.content[activeTab as keyof typeof t.content].description}
                     </p>
 
@@ -114,7 +118,7 @@ export default function InteractionModel() {
                             (feature, index) => (
                                 <div
                                     key={index}
-                                    className="border-2 border-[#b0c1de] bg-transparent px-5 py-3 text-[14px] font-medium text-slate-700"
+                                    className="border-2 border-[#b0c1de] bg-transparent px-5 py-3 text-[14px] font-medium text-[#1a1a1a]"
                                 >
                                     {feature}
                                 </div>

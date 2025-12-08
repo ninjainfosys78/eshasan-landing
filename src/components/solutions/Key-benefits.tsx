@@ -35,7 +35,7 @@ export default function KeyBenefits() {
       <div className="max-w-[1400px] mx-auto px-4 md:px-3 sm:px-2">
         <div className="text-center mb-10">
           <h2 className="text-[28px] font-bold text-[#000000] mb-3">{t.heading}</h2>
-          <p className="text-[16px] text-[#6B7280]">{t.subtitle}</p>
+          <p className="text-[16px] text-[#374151]">{t.subtitle}</p>
         </div>
 
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
@@ -51,7 +51,7 @@ export default function KeyBenefits() {
                 </CardHeader>
 
                 <CardContent className="px-6 pb-6 pt-2 text-center">
-                  <p className="text-[14px] text-[#6B7280] leading-relaxed">{benefit.desc}</p>
+                  <p className="text-[14px] text-[#374151] leading-relaxed">{benefit.desc}</p>
                 </CardContent>
               </Card>
             );

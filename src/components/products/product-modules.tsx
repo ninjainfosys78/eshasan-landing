@@ -54,7 +54,7 @@ export default function ProductModules() {
           <h2 className="text-[28px] font-bold text-[#000000] mb-3">
             {t.heading}
           </h2>
-          <p className="text-[16px] text-[#6B7280]">
+          <p className="text-[16px] text-[#374151]">
             {t.subtitle}
           </p>
         </div>
@@ -73,7 +73,7 @@ export default function ProductModules() {
                   </div>
                 </CardHeader>
                 <CardContent className="px-6 pb-6 pt-2 text-left">
-                  <p className="text-[14px] text-[#6B7280] leading-relaxed">
+                  <p className="text-[14px] text-[#374151] leading-relaxed">
                     {module.desc}
                   </p>
                 </CardContent>
