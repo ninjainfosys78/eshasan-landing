@@ -8,7 +8,7 @@ export const contactTranslations = {
       title: 'Contact Information',
       address: {
         label: 'Address',
-        value: 'Kathmandu, Nepal',
+        value: 'Baneshwor-10, Kathmandu, Nepal',
       },
       email: {
         label: 'Email',
@@ -16,7 +16,7 @@ export const contactTranslations = {
       },
       phone: {
         label: 'Phone',
-        value: '+977-9858042433',
+        value: '+977-9851343348, +977-9858042433, +977-9858042647, 01-5922361',
       },
       businessHours: {
         label: 'Business Hours',
@@ -96,7 +96,7 @@ export const contactTranslations = {
       title: 'सम्पर्क जानकारी',
       address: {
         label: 'ठेगाना',
-        value: 'काठमाडौं, नेपाल',
+        value: 'बानेश्वर–१०, काठमाडौं, नेपाल',
       },
       email: {
         label: 'इमेल',
@@ -104,7 +104,7 @@ export const contactTranslations = {
       },
       phone: {
         label: 'फोन',
-        value: '+९७७-९८५८०४२४३३',
+        value: '+९७७-९८५१३४३३४८, +९७७-९८५८०४२४३३, +९७७-९८५८०४२६४७, ०१-५९२२३६१',
       },
       businessHours: {
         label: 'व्यापार समय',

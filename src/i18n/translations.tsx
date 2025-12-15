@@ -125,9 +125,9 @@ export const translations = {
       },
       getInTouch: {
         title: 'Get in Touch',
-        location: 'Kathmandu, Nepal',
+        location: 'Baneshwor-10,Kathmandu, Nepal',
         email: 'info@ninjainfosys.com',
-        phone1: '+977-9858042647',
+        phone1: '+977-9851343348, +977-9858042433, +977-9858042647',
         phone2: '01-5922361',
       },
       copyright: '2025 Ninja Infosys. All rights reserved.',
@@ -350,9 +350,9 @@ export const translations = {
       },
       getInTouch: {
         title: 'सम्पर्क गर्नुहोस्',
-        location: 'काठमाडौं, नेपाल',
+        location: 'बानेश्वर–१०, काठमाडौं, नेपाल',
         email: 'info@ninjainfosys.com',
-        phone1: '+९७७-९८५८०४२४३३',
+        phone1: '+९७७-९८५१३४३३४८, +९७७-९८५८०४२४३३, +९७७-९८५८०४२६४७',
         phone2: '०१-५९२२३६१',
       },
       copyright: '२०२५ निन्जा इन्फोसिस। सर्वाधिकार सुरक्षित।',
