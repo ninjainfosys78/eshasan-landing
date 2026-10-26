@@ -151,7 +151,7 @@ export default function Footer() {
 
         <nav aria-label="Legal">
           <div className="flex items-center gap-2">
-            <a href="/terms-and-conditions" className="!text-white font-normal hover:underline">
+            <a href="/privacy-policy" className="!text-white font-normal hover:underline">
               {t.privacyPolicy}
             </a>
             <span className="opacity-70" aria-hidden="true">|</span>

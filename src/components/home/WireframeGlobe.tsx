@@ -18,10 +18,19 @@ export default function WireframeGlobe() {
     const camera = new THREE.PerspectiveCamera(60, width / height, 1, 2000);
     camera.position.z = 550;
 
-    const renderer = new THREE.WebGLRenderer({
-      antialias: true,
-      alpha: true,
-    });
+    let renderer: THREE.WebGLRenderer;
+    try {
+      renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        alpha: true,
+      });
+    } catch {
+      return;
+    }
+    if (!renderer.getContext()) {
+      renderer.dispose();
+      return;
+    }
     renderer.setPixelRatio(window.devicePixelRatio || 1);
     renderer.setSize(width, height);
     renderer.setClearColor(0x000000, 0);
