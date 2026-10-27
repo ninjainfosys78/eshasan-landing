@@ -13,6 +13,7 @@ export const privacyTranslations = {
         'Data Sharing',
         'Data Storage & Security',
         'Your Rights',
+        'Account & Data Deletion',
         "Children's Privacy",
         'Cookies',
         'Changes to This Policy',
@@ -77,6 +78,14 @@ export const privacyTranslations = {
           'You may request access to, correction of, or deletion of your personal information by contacting us using the details below, subject to any legal retention requirements applicable to government records.',
         ],
       },
+      accountDeletion: {
+        title: 'Account & Data Deletion',
+        content: [
+          'You can request deletion of your eShasan account and its associated data at any time by emailing info@ninjainfosys.com from the email address or phone number registered on your account, or by writing to our postal address below, with the subject line "Account Deletion Request".',
+          'Once we verify your request, we will delete your account and personal data within 30 days, except where we are required to retain certain records (such as submitted applications or grants already processed by a government office) to meet legal or regulatory recordkeeping obligations applicable to government services. Where full deletion is not possible, we will anonymize the data instead.',
+          'We will confirm by email once your account and data have been deleted.',
+        ],
+      },
       childrensPrivacy: {
         title: "Children's Privacy",
         content: [
@@ -121,6 +130,7 @@ export const privacyTranslations = {
         'डाटा साझेदारी',
         'डाटा भण्डारण र सुरक्षा',
         'तपाईंका अधिकारहरू',
+        'खाता र डाटा मेटाउने',
         'बालबालिकाको गोपनीयता',
         'कुकीज',
         'यस नीतिमा परिवर्तनहरू',
@@ -183,6 +193,14 @@ export const privacyTranslations = {
         title: 'तपाईंका अधिकारहरू',
         content: [
           'लागू हुने कानुनी अभिलेख आवश्यकताको अधीनमा रही, तपाईं तलको सम्पर्क विवरणमार्फत आफ्नो व्यक्तिगत जानकारीमा पहुँच, सुधार, वा मेटाउने अनुरोध गर्न सक्नुहुन्छ।',
+        ],
+      },
+      accountDeletion: {
+        title: 'खाता र डाटा मेटाउने',
+        content: [
+          'तपाईं जुनसुकै बेला आफ्नो खातामा दर्ता गरिएको इमेल ठेगाना वा फोन नम्बरबाट info@ninjainfosys.com मा इमेल गरेर, वा तलको ठेगानामा पत्र लेखेर, विषयमा "Account Deletion Request" लेखी आफ्नो eShasan खाता र सम्बन्धित डाटा मेटाउन अनुरोध गर्न सक्नुहुन्छ।',
+          'तपाईंको अनुरोध प्रमाणित गरेपछि, हामी ३० दिनभित्र तपाईंको खाता र व्यक्तिगत डाटा मेटाउनेछौं, सिवाय जहाँ सरकारी सेवासँग सम्बन्धित कानुनी वा नियामक अभिलेख आवश्यकता (जस्तै पेश गरिएका आवेदन वा सरकारी कार्यालयले प्रशोधन गरिसकेका अनुदानहरू) पूरा गर्न केही रेकर्ड राख्न आवश्यक पर्छ। पूर्ण मेटाउन सम्भव नभएमा, हामी त्यो डाटालाई गुमनाम (anonymize) बनाउनेछौं।',
+          'तपाईंको खाता र डाटा मेटाइएपछि हामी इमेलमार्फत पुष्टि गर्नेछौं।',
         ],
       },
       childrensPrivacy: {

@@ -17,6 +17,7 @@ export default function PrivacyContent() {
     t.sections.dataSharing,
     t.sections.dataStorageSecurity,
     t.sections.yourRights,
+    t.sections.accountDeletion,
     t.sections.childrensPrivacy,
     t.sections.cookies,
     t.sections.changesToPolicy,
@@ -75,7 +76,11 @@ export default function PrivacyContent() {
             </div>
 
             {numberedSections.map((section, index) => (
-              <div key={section.title} className="mb-12">
+              <div
+                key={section.title}
+                className="mb-12 scroll-mt-24"
+                id={section === t.sections.accountDeletion ? "account-deletion" : undefined}
+              >
                 <div className="flex items-start gap-4 mb-6">
                   <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center" aria-hidden="true">
                     {String(index + 1).padStart(2, '0')}
@@ -99,7 +104,7 @@ export default function PrivacyContent() {
             <div className="mb-12">
               <div className="flex items-start gap-4 mb-6">
                 <span className="flex-shrink-0 w-12 h-12 rounded-none bg-[#E8F0FF] text-[#003893] font-bold text-[18px] flex items-center justify-center" aria-hidden="true">
-                  10
+                  11
                 </span>
                 <h3 className="text-[20px] font-bold text-[#000000] mt-2">
                   {t.sections.contactInformation.title}
