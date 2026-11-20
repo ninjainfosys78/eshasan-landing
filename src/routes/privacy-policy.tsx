@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
@@ -6,13 +7,24 @@ import GlobalCTA from "@/components/home/global-cta";
 import { useLanguageStore } from "@/store/Language-store";
 import { privacyTranslations } from "@/i18n/privacy-translation";
 
-export const Route = createFileRoute("/privacy-policy" as any)({
+export const Route = createFileRoute("/privacy-policy")({
   component: PrivacyPolicyPage,
 });
 
 function PrivacyPolicyPage() {
   const { language } = useLanguageStore();
   const t = privacyTranslations[language].hero;
+
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+    const target = document.getElementById(hash);
+    if (target) {
+      requestAnimationFrame(() => {
+        target.scrollIntoView({ block: "start" });
+      });
+    }
+  }, []);
 
   return (
     <>

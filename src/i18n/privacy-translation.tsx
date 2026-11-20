@@ -21,10 +21,20 @@ export const privacyTranslations = {
       ],
     },
     legalAgreement: 'Privacy Policy',
+    effectiveDateLabel: 'Last updated',
+    effectiveDate: '20 November 2026',
     welcome: {
       title: 'Your Privacy Matters',
       description1: 'This Privacy Policy explains how eShasan ("we", "us", or "our") collects, uses, shares, and protects information when you use our website, mobile application, and related services (collectively, the "Services").',
       description2: 'By using our Services, you agree to the collection and use of information in accordance with this policy.',
+    },
+    mobileApps: {
+      title: 'Mobile apps covered by this policy',
+      intro: 'This Privacy Policy also applies to the following mobile applications published on Google Play by the respective local government body under the Government of Nepal:',
+      appName: 'App name',
+      developer: 'Developer / legal entity',
+      packageName: 'Android package',
+      note: 'For each of these applications, the publisher and data controller is the named municipal government. References to "we", "us", and "our" in this policy include that publisher for the data handled by its application.',
     },
     sections: {
       informationWeCollect: {
@@ -33,6 +43,8 @@ export const privacyTranslations = {
           'Account information: name, phone number, address, and citizenship or identity document numbers you provide when registering or submitting a government service request.',
           'Service request data: applications, grant requests, appointment bookings, and supporting documents you submit through the app.',
           'Documents and images: photos or scans of identity documents and other files you choose to upload for verification or processing.',
+          'App and device identifiers: a push notification token and basic app/device information needed to deliver notifications and diagnose failures.',
+          'Diagnostics: crash reports and error logs generated when the app fails, collected through Firebase Crashlytics.',
         ],
       },
       permissionsWeRequest: {
@@ -61,7 +73,7 @@ export const privacyTranslations = {
         title: 'Data Sharing',
         content: [
           'We share your information with the relevant government department or local body (palika) responsible for processing your request — this is the core purpose of the Services.',
-          'We use third-party service providers for infrastructure such as hosting and push notifications; these providers process data only on our behalf and under agreement, and do not use it for their own purposes.',
+          'We use third-party infrastructure providers to host the Services. Push notifications are delivered through Firebase Cloud Messaging (Google), which requires a device push token, and crash/error reports are collected through Firebase Crashlytics (Google), which receives app and device diagnostic data. These providers process such data only on our behalf and under agreement, and do not use it for their own purposes.',
           'We do not sell your personal information to third parties.',
         ],
       },
@@ -138,10 +150,20 @@ export const privacyTranslations = {
       ],
     },
     legalAgreement: 'गोपनीयता नीति',
+    effectiveDateLabel: 'अन्तिम अपडेट',
+    effectiveDate: '२० नोभेम्बर २०२६',
     welcome: {
       title: 'तपाईंको गोपनीयता महत्त्वपूर्ण छ',
       description1: 'यो गोपनीयता नीतिले तपाईंले हाम्रो वेबसाइट, मोबाइल एप्लिकेशन र सम्बन्धित सेवाहरू (सामूहिक रूपमा, "सेवाहरू") प्रयोग गर्दा इशासन ("हामी") ले कसरी जानकारी संकलन, प्रयोग, साझेदारी र सुरक्षा गर्छ भन्ने व्याख्या गर्दछ।',
       description2: 'हाम्रो सेवाहरू प्रयोग गरेर, तपाईं यस नीति अनुसार जानकारीको संकलन र प्रयोगमा सहमत हुनुहुन्छ।',
+    },
+    mobileApps: {
+      title: 'यस नीतिमा समेटिएका मोबाइल एपहरू',
+      intro: 'यो गोपनीयता नीति नेपाल सरकार अन्तर्गत सम्बन्धित स्थानीय सरकारी निकायले Google Play मा प्रकाशित गरेका निम्न मोबाइल एप्लिकेशनहरूमा पनि लागू हुन्छ:',
+      appName: 'एपको नाम',
+      developer: 'प्रकाशक / कानुनी संस्था',
+      packageName: 'Android प्याकेज',
+      note: 'यी एपहरूको प्रकाशक र डाटा नियन्त्रक उल्लिखित नगरपालिका/गाउँपालिका हो। यस नीतिमा "हामी" भन्ने सन्दर्भमा उक्त प्रकाशक पनि समावेश हुन्छ।',
     },
     sections: {
       informationWeCollect: {
@@ -150,6 +172,8 @@ export const privacyTranslations = {
           'खाता जानकारी: दर्ता गर्दा वा सरकारी सेवा अनुरोध पेश गर्दा तपाईंले प्रदान गर्नुभएको नाम, फोन नम्बर, ठेगाना, र नागरिकता वा परिचय पत्र नम्बरहरू।',
           'सेवा अनुरोध डाटा: एपमार्फत पेश गरिएका आवेदनहरू, अनुदान अनुरोधहरू, अपोइन्टमेन्ट बुकिङहरू र सहायक कागजातहरू।',
           'कागजात र तस्विरहरू: प्रमाणीकरण वा प्रशोधनका लागि तपाईंले अपलोड गर्नुभएका परिचय कागजातका तस्विर वा स्क्यानहरू।',
+          'एप र उपकरण पहिचानकर्ता: सूचना पुर्‍याउन र त्रुटि निदान गर्न आवश्यक पुश नोटिफिकेशन टोकन र आधारभूत एप/उपकरण जानकारी।',
+          'निदान डाटा: एप बिग्रँदा Firebase Crashlytics मार्फत संकलित क्र्यास रिपोर्ट तथा त्रुटि लगहरू।',
         ],
       },
       permissionsWeRequest: {
@@ -178,7 +202,7 @@ export const privacyTranslations = {
         title: 'डाटा साझेदारी',
         content: [
           'हामी तपाईंको जानकारी तपाईंको अनुरोध प्रशोधन गर्न जिम्मेवार सम्बन्धित सरकारी निकाय वा स्थानीय तह (पालिका) सँग साझेदारी गर्छौं — यो सेवाहरूको मुख्य उद्देश्य हो।',
-          'हामी होस्टिङ र पुश नोटिफिकेशन जस्ता पूर्वाधारका लागि तेस्रो-पक्ष सेवा प्रदायकहरू प्रयोग गर्छौं; यी प्रदायकहरूले सम्झौता अन्तर्गत हाम्रो तर्फबाट मात्र डाटा प्रशोधन गर्छन्।',
+          'हामी सेवाहरू होस्ट गर्न तेस्रो-पक्ष पूर्वाधार प्रदायकहरू प्रयोग गर्छौं। पुश नोटिफिकेशन Firebase Cloud Messaging (Google) मार्फत पठाइन्छ, जसका लागि उपकरण पुश टोकन आवश्यक हुन्छ; क्र्यास/त्रुटि रिपोर्ट Firebase Crashlytics (Google) मार्फत संकलित गरिन्छ, जसले एप र उपकरणको निदान जानकारी प्राप्त गर्छ। यी प्रदायकहरूले यस्तो डाटा हाम्रो तर्फबाट मात्र, सम्झौता अन्तर्गत प्रशोधन गर्छन् र आफ्नो उद्देश्यका लागि प्रयोग गर्दैनन्।',
           'हामी तपाईंको व्यक्तिगत जानकारी तेस्रो पक्षलाई बेच्दैनौं।',
         ],
       },

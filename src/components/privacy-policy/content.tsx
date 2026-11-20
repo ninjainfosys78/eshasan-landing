@@ -5,6 +5,7 @@ import {
 } from "../ui/card";
 import { useLanguageStore } from "@/store/Language-store";
 import { privacyTranslations } from "@/i18n/privacy-translation";
+import MobileAppIdentifiers from "./MobileAppIdentifiers";
 
 export default function PrivacyContent() {
   const { language } = useLanguageStore();
@@ -60,6 +61,10 @@ export default function PrivacyContent() {
               <span className="text-[#003893] text-[14px] font-medium">{t.legalAgreement}</span>
             </div>
 
+            <p className="mb-8 text-[13px] text-[#6B7280]">
+              {t.effectiveDateLabel}: {t.effectiveDate}
+            </p>
+
             {/* Welcome Section */}
             <div className="mb-12">
               <h2 className="text-[24px] font-bold text-[#000000] mb-6">
@@ -74,6 +79,8 @@ export default function PrivacyContent() {
                 {t.welcome.description2}
               </p>
             </div>
+
+            <MobileAppIdentifiers />
 
             {numberedSections.map((section, index) => (
               <div
