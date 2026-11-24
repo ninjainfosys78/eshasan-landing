@@ -18,4 +18,10 @@ export const mobileAppPolicies: MobileAppPolicy[] = [
     developerName: "Besishahar Municipality",
     packageName: "com.besishaharmun.app",
   },
+  {
+    anchorId: "bansgadhi",
+    appName: "Bansgadhi Municipality",
+    developerName: "Bansgadhi Municipality",
+    packageName: "com.bansgadhimun.app",
+  },
 ];
